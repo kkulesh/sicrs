@@ -5,7 +5,7 @@ export const HeaderContent: Record<string, {
   height: string;
 }> = {
   home: {
-    background: "/images/HeaderBackgrounds/background4.jpg", //"/images/ai_background.jpg"
+    background: "/images/HeaderBackgrounds/60.jpg", //"/images/ai_background.jpg"
     bottomText1: "Штучний інтелект як інструмент майбутнього",
     bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
     height: "560px",

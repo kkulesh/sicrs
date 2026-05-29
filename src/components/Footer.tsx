@@ -17,7 +17,6 @@ export function Footer() {
     { key: "home", label: t('header.nav.home'), path: "/" },
     { key: "experts", label: t('header.nav.experts'), path: "/experts" },
     { key: "publications", label: t('header.nav.publications'), path: "/publications" },
-    { key: "datasets", label: t('header.nav.datasets'), path: "/datasets" },
     { key: "events", label: t('header.nav.events'), path: "/events" },
     { key: "contacts", label: t('header.nav.contacts'), path: "/contacts" },
   ];

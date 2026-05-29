@@ -11,7 +11,8 @@ export function HomePage() {
       <TasksSection />
       <HomeHero />
       <InitiativesSection />
-      <StatsSection />
     </main>
   );
 }
+
+// <StatsSection />

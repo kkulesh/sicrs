@@ -22,12 +22,9 @@ export function SideMenu({ onNavigate }: SideMenuProps) {
     [
       { label: t("header.nav.home"), icon: <Home className="w-4 h-4 mr-3" />, to: "/", page: "home" },
       { label: t("header.bottomNav.experts"), icon: <Users className="w-4 h-4 mr-3" />, to: "/experts", page: "experts" },
-      { label: t("header.bottomNav.researchTopics"), icon: <BookOpen className="w-4 h-4 mr-3" />, to: "/research-topics", page: "researchTopics" },
     ],
     [
       { label: t("header.bottomNav.publications"), icon: <FileText className="w-4 h-4 mr-3" />, to: "/publications", page: "publications" },
-      { label: t("header.bottomNav.datasets"), icon: <Database className="w-4 h-4 mr-3" />, to: "/datasets", page: "datasets" },
-      { label: t("header.bottomNav.podcasts"), icon: <Mic className="w-4 h-4 mr-3" />, to: "/podcasts", page: "podcasts" },
       { label: t("header.bottomNav.events"), icon: <Calendar className="w-4 h-4 mr-3" />, to: "/events", page: "events" },
     ],
     [

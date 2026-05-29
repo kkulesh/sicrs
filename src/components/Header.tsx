@@ -25,10 +25,7 @@ export function Header() {
   // Мапимо URL на ключ для HeaderContent основних сторінок
   const routeToPage: Record<string, string> = {
     "/": "home",
-    "/research-topics": "researchTopics",
     "/publications": "publications",
-    "/datasets": "datasets",
-    "/podcasts": "podcasts",
     "/events": "events",
     "/experts": "experts",
     "/partnership": "partnership",
@@ -38,7 +35,6 @@ export function Header() {
 
   // Детальні сторінки з окремим ключем
   const detailRoutes: Record<string, string> = {
-    "/datasets/": "datasetDetail",
     "/publications/": "publicationDetail",
     "/events/": "eventDetail",
     "/experts/": "expertDetail",
@@ -236,16 +232,6 @@ export function Header() {
             {/* Bottom Navigation Row */}
             <div className="flex items-center space-x-8 text-lg">
               <Link
-                to="/research-topics"
-                className={`font-bold transition-colors px-3 py-2 rounded-full ${
-                  currentPage === "researchTopics"
-                    ? "text-white bg-white/20 shadow-lg"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {t("header.bottomNav.researchTopics")}
-              </Link>
-              <Link
                 to="/publications"
                 className={`font-bold transition-colors px-3 py-2 rounded-full ${
                   currentPage === "publications"
@@ -254,26 +240,6 @@ export function Header() {
                 }`}
               >
                 {t("header.bottomNav.publications")}
-              </Link>
-              <Link
-                to="/datasets"
-                className={`font-bold transition-colors px-3 py-2 rounded-full ${
-                  currentPage === "datasets"
-                    ? "text-white bg-white/20 shadow-lg"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {t("header.bottomNav.datasets")}
-              </Link>
-              <Link
-                to="/podcasts"
-                className={`font-bold transition-colors px-3 py-2 rounded-full ${
-                  currentPage === "podcasts"
-                    ? "text-white bg-white/20 shadow-lg"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {t("header.bottomNav.podcasts")}
               </Link>
               <Link
                 to="/events"
