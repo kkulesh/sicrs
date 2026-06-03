@@ -156,6 +156,13 @@ export function Header() {
                     </Link>
 
                   <Link 
+                    to="/contact-form"
+                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full hidden lg:block`}
+                    >
+                      {t('contacts.contactForm')}
+                    </Link>
+
+                  <Link 
                     to="/about-us"
                     className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
                         currentPage === "about"

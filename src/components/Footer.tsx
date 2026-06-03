@@ -19,6 +19,7 @@ export function Footer() {
     { key: "publications", label: t('header.nav.publications'), path: "/publications" },
     { key: "events", label: t('header.nav.events'), path: "/events" },
     { key: "contacts", label: t('header.nav.contacts'), path: "/contacts" },
+    { key: "contactForm", label: t('footer.contactFormLink') || "Форма для зворотного зв’язку", path: "/contact-form" },
   ];
 
   return (

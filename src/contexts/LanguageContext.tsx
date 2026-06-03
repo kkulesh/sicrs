@@ -154,7 +154,8 @@ const ukrainianTranslations = {
     caption: "© 2025 Центр Стратегій Застосування Штучного Інтелекту. Всі права захищені",
     address: "пр. Берестейський, 37, Київ, 03056, Україна",
     phone: "+380 44 204 8000",
-    email: "info@ai-center.kpi.ua"
+    email: "info@ai-center.kpi.ua",
+    contactFormLink: "Форма для зворотного зв'язку"
   },
   homeHero: {
     title: "Формування експертного середовища у сфері ШІ",
@@ -272,7 +273,17 @@ const ukrainianTranslations = {
     getInTouch: "Як з нами зв'язатися",
     findUs: "Як нас знайти",
     findUsDetails: "Ми розташовані в головному корпусі КПІ ім. Ігоря Сікорського",
-    contactForm: "Форма зворотного зв'язку"
+    contactForm: "Форма зворотного зв'язку",
+    sending: "Відправка...",
+    formSuccess: "Повідомлення успішно відправлено!",
+    formError: "Сталася помилка. Будь ласка, спробуйте пізніше.",
+    formName: "Ім'я",
+    formEmail: "Імейл",
+    formPhone: "Контактний телефон",
+    formPhoneFormatHint: "Введіть номер у міжнародному форматі (наприклад, +380XXXXXXXXX)",
+    formPhoneHint: "Формат: +380XXXXXXXXX",
+    formMessage: "Звернення",
+    formSubmit: "Відправити"
   },
   aboutUs: {
     aboutContent: {
@@ -615,7 +626,8 @@ const englishTranslations = {
     caption: "© 2025 Center for Artificial Intelligence Application Strategies. All Rights Reserved",
     address: "37 Beresteiskyi Ave, Kyiv, 03056, Ukraine",
     phone: "+380 44 204 8000",
-    email: "info@ai-center.kpi.ua"
+    email: "info@ai-center.kpi.ua",
+    contactFormLink: "Contact Form"
   },
   homeHero: {
     title: "Building Expert Environment in AI Field",
@@ -733,7 +745,17 @@ const englishTranslations = {
     getInTouch: "Get In touch",
     findUs: "How to find us",
     findUsDetails: "We are located in the main building of Igor Sikorsky Kyiv Polytechnic Institute",
-    contactForm: "Contact Form"
+    contactForm: "Contact Form",
+    sending: "Sending...",
+    formSuccess: "Message sent successfully!",
+    formError: "An error occurred. Please try again later.",
+    formName: "Name",
+    formEmail: "Email",
+    formPhone: "Phone",
+    formPhoneFormatHint: "Enter phone in international format (e.g., +380XXXXXXXXX)",
+    formPhoneHint: "Format: +380XXXXXXXXX",
+    formMessage: "Message",
+    formSubmit: "Send"
   },
   aboutUs: {
     aboutContent: {

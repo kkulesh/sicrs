@@ -22,6 +22,8 @@ import { Events } from "./components/Events.js";
 import { EventsDetailPage } from "./components/EventsDetailPage.js";
 import { ExpertsPage } from "./components/ExpertsPage.js";
 import { ExpertDetailPage } from "./components/ExpertDetailPage.js";
+import { ContactForm } from "./components/ContactForm.js";
+import { AdminContacts } from "./components/AdminContacts.js";
 
 function AppContent() {
   return (
@@ -63,6 +65,12 @@ function AppContent() {
         {/* Експерти */}
         <Route path="/experts" element={<ExpertsPage />} />
         <Route path="/experts/:id" element={<ExpertDetailPage />} />
+
+        {/* Форма зворотного зв'язку */}
+        <Route path="/contact-form" element={<ContactForm />} />
+
+        {/* Адмінка для звернень */}
+        <Route path="/admin/contacts" element={<AdminContacts />} />
       </Routes>
 
       <Footer />

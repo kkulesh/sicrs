@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: sicrs
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  php:
+    build:
+      context: .
+      dockerfile: php.Dockerfile
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: sicrs
+      DB_USER: user
+      DB_PASSWORD: password
+    volumes:
+      - ./public:/var/www/html
+    depends_on:
+      - db
+
+volumes:
+  db_data:

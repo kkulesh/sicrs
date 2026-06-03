@@ -45,3 +45,6 @@ logs/
 
 # Makefile
 Makefile
+
+# PHP Conf
+public/api/db_config.php

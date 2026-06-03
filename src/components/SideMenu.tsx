@@ -30,6 +30,7 @@ export function SideMenu({ onNavigate }: SideMenuProps) {
     [
       { label: t("header.topNav.partnership"), icon: <Handshake className="w-4 h-4 mr-3" />, to: "/partnership", page: "partnership" },
       { label: t("header.topNav.contacts"), icon: <Phone className="w-4 h-4 mr-3" />, to: "/contacts", page: "contacts" },
+      { label: t("contacts.contactForm"), icon: <FileText className="w-4 h-4 mr-3" />, to: "/contact-form", page: "contact-form" },
       { label: t("header.topNav.about"), icon: <Info className="w-4 h-4 mr-3" />, to: "/about-us", page: "about" },
     ]
   ];
