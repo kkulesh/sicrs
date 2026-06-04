@@ -15,11 +15,10 @@ export function Footer() {
 
   const navLinks = [
     { key: "home", label: t('header.nav.home'), path: "/" },
-    { key: "experts", label: t('header.nav.experts'), path: "/experts" },
-    { key: "publications", label: t('header.nav.publications'), path: "/publications" },
-    { key: "events", label: t('header.nav.events'), path: "/events" },
-    { key: "contacts", label: t('header.nav.contacts'), path: "/contacts" },
-    { key: "contactForm", label: t('footer.contactFormLink') || "Форма для зворотного зв’язку", path: "/contact-form" },
+    { key: "news", label: t('header.topNav.news'), path: "/#news" },
+    { key: "about-us", label: t('header.topNav.about'), path: "/#about-us" },
+    { key: "partnerships", label: t('header.topNav.partnership'), path: "/#partnerships" },
+    { key: "contactForm", label: t('footer.contactFormLink'), path: "/contact-form" },
   ];
 
   return (
@@ -42,7 +41,7 @@ export function Footer() {
               >
               
               {/* Logo */}
-              <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors shadow-lg">
+              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center group-hover:bg-gray-100 transition-colors shadow-lg">
                 <img
                   src="/images/Logos/L-100x100.png"
                   alt="Logo"
@@ -63,12 +62,16 @@ export function Footer() {
 
             {/* Contact info */}
             <div className="space-y-3 text-gray-300 text-sm">
+
+              {/*
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-3" /> {t('footer.address')}
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-3" /> {t('footer.phone')}
               </div>
+              */}
+
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3" /> {t('footer.email')}
               </div>
@@ -94,7 +97,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Social Media */}
+
+          {/* 
+          Social Media 
           <div>
             <h4 className="text-lg font-medium mb-4">{t('footer.followUs')}</h4>
             <div className="flex space-x-4 mt-2 md:mt-0">
@@ -109,7 +114,9 @@ export function Footer() {
               </a>
             </div>
           </div>
+          */}
         </div>
+        
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">

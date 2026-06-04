@@ -60,10 +60,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
 const ukrainianTranslations = {
   header: {
-    title: "ЦЕНТР СТРАТЕГІЙ\nЗАСТОСУВАННЯ\nШТУЧНОГО\nІНТЕЛЕКТУ",
-    subtitle: "КПІ ім. Ігоря Сікорського",
+    title: "SICRS",
+    subtitle: "Society for industrial recovery\n& community resilience studies",
     topNav: {
-      partnership: "Партнерство",
+      news: "Новини",
+      partnership: "Партнерства",
       contacts: "Контакти",
       about: "Про нас"
     },
@@ -110,7 +111,7 @@ const ukrainianTranslations = {
     }
   },
   stickyHeader: {
-    title: "Центр Стратегій Застосування Штучного Інтелекту",
+    title: "SICRS",
   },
   search: {
     placeholder: "Шукаю...",
@@ -146,20 +147,21 @@ const ukrainianTranslations = {
     cancel: "Скасувати",
   },
   footer: {
-    title: "ЦЕНТР СТРАТЕГІЙ\nЗАСТОСУВАННЯ\nШТУЧНОГО\nІНТЕЛЕКТУ",
-    subtitle: "КПІ ім. Ігоря Сікорського",
+    title: "SICRS",
+    subtitle: "Society for industrial recovery\n& community resilience studies",
     quickLinks: "Швидкі посилання",
     contact: "Контакти",
     followUs: "Слідкуйте за нами",
-    caption: "© 2025 Центр Стратегій Застосування Штучного Інтелекту. Всі права захищені",
+    caption: "© 2026 Наукове товариство з досліджень відновлення промисловості та резильєнтності територіальних громад. Всі права захищені.",
     address: "пр. Берестейський, 37, Київ, 03056, Україна",
     phone: "+380 44 204 8000",
-    email: "info@ai-center.kpi.ua",
-    contactFormLink: "Форма для зворотного зв'язку"
+    email: "hellosicrs@gmail.com",
+    contactFormLink: "Форма зворотного зв'язку"
   },
-  homeHero: {
-    title: "Формування експертного середовища у сфері ШІ",
+  formHero: {
+    title: "Залиште контакти для співпраці",
     subtitle: "Розроблення інноваційних рішень у сфері штучного інтелекту в стратегічних секторах економіки",
+    form:"Форма зворотного зв'язку",
     learnMore: "Дізнатися більше",
     ourEvents: "Наші події",
     description: {
@@ -170,7 +172,7 @@ const ukrainianTranslations = {
     university: "КПІ ім. Ігоря Сікорського"
   },
   tasks: {
-    title: "Завдання центру",
+    title: "Про наше товариство",
     subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
     analyticalResearch: {
       title: "Аналітичні дослідження",
@@ -213,6 +215,26 @@ const ukrainianTranslations = {
       tags: ["Партнерство", "Співпраця", "Міжнародні зв'язки"]
     }
   },
+  homePartnerships: {
+    title: "Наші партнери",
+    subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
+    analyticalResearch: {
+      title: "Аналітичні дослідження",
+      description: "Проведення глибинних досліджень у сфері штучного інтелекту та його застосування в різних галузях економіки."
+    },
+    consulting: {
+      title: "Консультування стейкхолдерів",
+      description: "Надання експертних консультацій для бізнесу, державного сектору та наукових установ."
+    },
+    education: {
+      title: "Навчання та поширення досвіду",
+      description: "Організація освітніх програм, семінарів та воркшопів для підвищення кваліфікації фахівців."
+    },
+    strategy: {
+      title: "Обговорення стратегій та інновацій",
+      description: "Розробка та впровадження інноваційних стратегій використання ШІ в ключових секторах економіки."
+    }
+  },
   stats: {
     title: "Результати нашої роботи",
     subtitle: "Цифри, що демонструють наш внесок у розвиток штучного інтелекту в Україні",
@@ -237,9 +259,9 @@ const ukrainianTranslations = {
       description: "Реалізовано програм підвищення кваліфікації"
     }
   },
-  announcements: {
-    title: "Анонси подій",
-    subtitle: "Майбутні заходи, воркшопи та можливості для професійного розвитку у сфері штучного інтелекту",
+  news: {
+    title: "Новини",
+    subtitle: "Наші заходи, воркшопи та можливості для професійного розвитку у сфері штучного інтелекту",
     learnMore: "Дізнатися більше",
     registerNow: "Зареєструватись зараз"
   },
@@ -266,7 +288,7 @@ const ukrainianTranslations = {
     phoneLabel: "Телефон:",
     phone: "+380 44 204 8000",
     emailLabel: "Email:",
-    email: "info@ai-center.kpi.ua",
+    email: "hellosicrs@gmail.com",
     workingHours: "Години роботи:",
     workingDays: "Понеділок - П'ятниця",
     workingTime: "9:00 - 18:00",
@@ -533,9 +555,10 @@ const ukrainianTranslations = {
 
 const englishTranslations = {
   header: {
-    title: "CENTER FOR\nARTIFICIAL\nINTELLIGENCE\nAPPLICATION\nSTRATEGIES",
-    subtitle: "Igor Sikorsky Kyiv\nPolytechnic Institute",
+    title: "SICRS",
+    subtitle: "Society for industrial recovery\n& community resilience studies",
     topNav: {
+      news: "News",
       partnership: "Partnerships",
       contacts: "Contacts",
       about: "About us"
@@ -582,7 +605,7 @@ const englishTranslations = {
     }
   },
   stickyHeader: {
-    title: "Center for Artificial Intelligence Application Strategies",
+    title: "SICRS",
   },
   search: {
     placeholder: "Looking for...",
@@ -618,20 +641,21 @@ const englishTranslations = {
     cancel: "Cancel",
   },
   footer: {
-    title: "CENTER FOR\nARTIFICIAL\nINTELLIGENCE\nAPPLICATION\nSTRATEGIES",
-    subtitle: "Igor Sikorsky Kyiv\nPolytechnic Institute",
+    title: "SICRS",
+    subtitle: "Society for industrial recovery\n& community resilience studies",
     quickLinks: "Quick Links",
     contact: "Contact",
     followUs: "Follow Us",
-    caption: "© 2025 Center for Artificial Intelligence Application Strategies. All Rights Reserved",
+    caption: "© 2026 Society for Industrial Recovery & Community Resilience Studies. All Rights Reserved.",
     address: "37 Beresteiskyi Ave, Kyiv, 03056, Ukraine",
     phone: "+380 44 204 8000",
     email: "info@ai-center.kpi.ua",
     contactFormLink: "Contact Form"
   },
-  homeHero: {
+  formHero: {
     title: "Building Expert Environment in AI Field",
     subtitle: "Developing innovative solutions in artificial intelligence for strategic economic sectors",
+    form:"Feedback form",
     learnMore: "Learn More",
     ourEvents: "Our Events",
     description: {
@@ -685,6 +709,26 @@ const englishTranslations = {
       tags: ["Partnership", "Collaboration", "International Relations"]
     }
   },
+  homePartnerships: {
+    title: "Our Partners",
+    subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
+    analyticalResearch: {
+      title: "Аналітичні дослідження",
+      description: "Проведення глибинних досліджень у сфері штучного інтелекту та його застосування в різних галузях економіки."
+    },
+    consulting: {
+      title: "Консультування стейкхолдерів",
+      description: "Надання експертних консультацій для бізнесу, державного сектору та наукових установ."
+    },
+    education: {
+      title: "Навчання та поширення досвіду",
+      description: "Організація освітніх програм, семінарів та воркшопів для підвищення кваліфікації фахівців."
+    },
+    strategy: {
+      title: "Обговорення стратегій та інновацій",
+      description: "Розробка та впровадження інноваційних стратегій використання ШІ в ключових секторах економіки."
+    }
+  },
   stats: {
     title: "Results of Our Work",
     subtitle: "Numbers that demonstrate our contribution to artificial intelligence development in Ukraine",
@@ -709,9 +753,9 @@ const englishTranslations = {
       description: "Professional development programs implemented"
     }
   },
-  announcements: {
-    title: "Announcements",
-    subtitle: "Upcoming events, workshops, and professional development opportunities in artificial intelligence",
+  news: {
+    title: "News",
+    subtitle: "Our upcoming events, workshops, and professional development opportunities in artificial intelligence",
     learnMore: "Learn More",
     registerNow: "Register Now"
   },

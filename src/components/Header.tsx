@@ -25,11 +25,11 @@ export function Header() {
   // Мапимо URL на ключ для HeaderContent основних сторінок
   const routeToPage: Record<string, string> = {
     "/": "home",
+    "/contact-form": "contactForm",
     "/publications": "publications",
     "/events": "events",
     "/experts": "experts",
     "/partnership": "partnership",
-    "/contacts": "contacts",
     "/about-us": "about"
   };
 
@@ -38,9 +38,10 @@ export function Header() {
     "/publications/": "publicationDetail",
     "/events/": "eventDetail",
     "/experts/": "expertDetail",
-    "/announcements/": "articleDetail",
+    "/news/": "articleDetail",
     "/about-us/team/": "teamMemberDetail"
   };
+
 
   // Перевіряємо спочатку детальні маршрути
     const detailPage = Object.entries(detailRoutes).find(([prefix]) =>
@@ -98,7 +99,7 @@ export function Header() {
             <Link to="/" className="flex items-center space-x-4 cursor-pointer group">
             
             {/* Center Logo */}
-            <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
+            <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
               <img
                 src="/images/Logos/L-100x100.png"
                 alt="Logo"
@@ -112,12 +113,12 @@ export function Header() {
                 isUk ? "leading-tight" : "leading-super-tight"
               }`}
             >
-              <h1 className={`text-white text-lg font-medium whitespace-pre-line ${
+              <h1 className={`text-white text-xl font-medium whitespace-pre-line ${
                 isUk ? "leading-tight" : "leading-super-tight"
               }`}>
                 {t("header.title")}
               </h1>
-              <p className={`text-white/80 text-sm whitespace-pre-line ${
+              <p className={`text-white/80 text-lg whitespace-pre-line ${
                 isUk ? "leading-tight" : "leading-super-tight"
               }`}>
                 {t("header.subtitle")}
@@ -133,8 +134,16 @@ export function Header() {
               {/* Top navigation row */}
               <div className={`flex items-center justify-between w-full transition-all duration-300 ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                 <div className="flex items-center space-x-8 text-lg">
-                  <Link 
-                    to="/partnership"
+                  
+                  <a href="#news" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.news')}
+                  </a>
+                  
+                  <a href="#about-us" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.about')}
+                  </a>
+
+                  <a href="#partnerships"
                     className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
                         currentPage === "partnership"
                           ? "text-white bg-white/20 shadow-lg"
@@ -142,36 +151,20 @@ export function Header() {
                       }`}
                     >
                       {t('header.topNav.partnership')}
-                    </Link>
-
-                  <Link 
-                    to="/contacts"
-                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
-                        currentPage === "contacts"
-                          ? "text-white bg-white/20 shadow-lg"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      {t('header.topNav.contacts')}
-                    </Link>
+                    </a>
 
                   <Link 
                     to="/contact-form"
-                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full hidden lg:block`}
+                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
+                        currentPage === "contact-form"
+                          ? "text-white bg-white/20 shadow-lg"
+                          : "text-white/90 hover:text-white hover:bg-white/10"
+                      }`}
                     >
                       {t('contacts.contactForm')}
                     </Link>
 
-                  <Link 
-                    to="/about-us"
-                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
-                        currentPage === "about"
-                          ? "text-white bg-white/20 shadow-lg"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      {t('header.topNav.about')}
-                    </Link>
+                  
 
                   <Button onClick={toggleLanguage} variant="ghost" size="sm" className="text-white/90 hover:text-white hover:bg-white/10 h-10 px-4 rounded-full flex items-center">
                     <Globe className="w-5 h-5 mr-2" />
@@ -236,7 +229,8 @@ export function Header() {
           </div>
 
 
-            {/* Bottom Navigation Row */}
+            {/*
+            Bottom Navigation Row 
             <div className="flex items-center space-x-8 text-lg">
               <Link
                 to="/publications"
@@ -269,7 +263,9 @@ export function Header() {
                 {t("header.bottomNav.experts")}
               </Link>
             </div>
+            */}
           </div>
+          
 
           {/* Mobile Menu with SideMenu */}
             <div className="xl:hidden">
@@ -301,7 +297,7 @@ export function Header() {
                   </SheetHeader>
 
                   <div className="flex-1 overflow-y-auto">
-                    <SideMenu onNavigate={handleNavigation} />
+                    <SideMenu onNavigate={handleNavigation} onCloseMenu={() => setIsMenuOpen(false)} />
                   </div>
                 </SheetContent>
               </Sheet>

@@ -30,7 +30,7 @@ export function TasksSection() {
   ];
 
   return (
-    <section className="relative py-16 bg-primary-light3/75">
+    <section id="about-us" className="scroll-mt-[60px] relative py-16 bg-primary-light3/75">
       {/* Grain texture overlay */}
         <div className="absolute bg-black/5 inset-0 pointer-events-none">
           <div
