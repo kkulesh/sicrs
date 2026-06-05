@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 interface SearchResult {
   id: string;
-  type: 'announcement' | 'publication' | 'dataset' | 'event' | 'expert' | 'team';
+  type: 'news' ; // | 'contact-form' | 'publication' | 'dataset' | 'event' | 'expert' | 'team'
   title: string;
   description?: string;
   category?: string;
@@ -31,18 +31,8 @@ export function SearchResults({ searchQuery, results, onClose }: SearchResultsPr
   // Мапа для побудови URL
   const getRoute = (type: SearchResult['type'], id: string) => {
     switch (type) {
-      case 'announcement':
-        return `/announcements/${id}`;
-      case 'publication':
-        return `/publications/${id}`;
-      case 'dataset':
-        return `/datasets/${id}`;
-      case 'event':
-        return `/events/${id}`;
-      case 'expert':
-        return `/experts/${id}`;
-      case 'team':
-        return `/about-us/team/${id}`;
+      case 'news':
+        return `/news/${id}`;
       default:
         return `/`; // fallback
     }
@@ -95,13 +85,8 @@ export function SearchResults({ searchQuery, results, onClose }: SearchResultsPr
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center space-x-2 mb-1">
-                        {result.type === 'announcement' && <Megaphone className="w-4 h-4 text-blue-500" />}
-                        {result.type === 'publication' && <FileText className="w-4 h-4 text-green-500" />}
-                        {result.type === 'dataset' && <Database className="w-4 h-4 text-purple-500" />}
-                        {result.type === 'event' && <Calendar className="w-4 h-4 text-pink-500" />}
-                        {result.type === 'expert' && <Users className="w-4 h-4 text-orange-500" />}
-                        {result.type === 'team' && <User className="w-4 h-4 text-yellow-500" />}
-
+                        {result.type === 'news' && <Megaphone className="w-4 h-4 text-green-500" />}
+                        
                         {result.category && (
                           <Badge variant="secondary" className="text-xs bg-gray-100 rounded-full">
                             {result.category}

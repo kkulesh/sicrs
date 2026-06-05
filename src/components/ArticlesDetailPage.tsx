@@ -4,154 +4,30 @@ import { Card } from "./ui/card.js";
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, Tag } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback.js";
 import { useLanguage } from "../contexts/LanguageContext.js";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { Articles } from "./data/ArticlesData.js";
 
-interface ArticlesDetailPageProps {
-  articleId?: string;
-}
-
-export function ArticlesDetailPage({ articleId }: ArticlesDetailPageProps) {
+export function ArticlesDetailPage() {
+  const { id } = useParams();
   const { t, language } = useLanguage();
   const isUk = language === "uk";
 
   // Отримуємо дані статті на основі ID
-  const getArticleData = (id: string) => {
+  const articles = Articles(isUk);
 
-    const allArticles = {
-      "featured": {
-        id: "featured",
-        title: isUk
-          ? "Трансформація європейської політики ШІ: нова рамка для інновацій та етики"
-          : "Transforming European AI Policy: A New Framework for Innovation and Ethics",
-        description: isUk
-          ? "Цьогорічна щорічна конференція зосереджена на 25-річчі досліджень штучного інтелекту та його впливі на українську економіку"
-          : "This year's annual conference focuses on 25 years of artificial intelligence research and its impact on Ukrainian economy",
-        category: isUk 
-          ? "Щорічні заходи" 
-          : "Annual Events",
-        date: "2024.11.15",
-        readTime: "8",
-        image: "https://images.unsplash.com/photo-1666597107756-ef489e9f1f09?w=1080",
-        author: isUk 
-          ? "Проф. Олександр Петренко" 
-          : "Center for Strategic Use of AI",
-        tags: isUk
-          ? ["штучний інтелект", "конференція", "дослідження", "економіка", "Україна"]
-          : ["artificial intelligence", "conference", "research", "economy", "Ukraine"],
-        content: isUk ? [
-          "Центр стратегічного використання штучного інтелекту з гордістю оголошує про проведення своєї щорічної конференції, присвяченої 25-річчю досліджень в галузі ШІ в Україні. Ця знакова подія відбудеться 15-16 листопада 2024 року і зберіт провідних експертів, дослідників та інноваторів з усього світу.",
-          "Протягом двох днів учасники матимуть можливість познайомитися з найновішими досягненнями в сфері штучного інтелекту, обговорити виклики та перспективи розвитку технологій ШІ в контексті української економіки та суспільства.",
-          "Програма конференції включатиме:",
-          "• Основні доповіді від провідних світових експертів з ШІ",
-          "• Панельні дискусії про етичні аспекти використання ШІ",
-          "• Презентації останніх досліджень українських наукових інституцій",
-          "• Воркшопи з практичного застосування ШІ в різних секторах економіки",
-          "• Нетворкінг сесії для професійного спілкування",
-          "Особлива увага буде приділена впливу штучного інтелекту на трансформацію української економіки, зокрема в контексті відновлення після війни та інтеграції з європейськими стандартами.",
-          "Конференція також стане платформою для презентації нових ініціатив Центру, включаючи програми міжнародного співробітництва та освітні проєкти, спрямовані на розвиток талантів у сфері ШІ.",
-          "Реєстрація на подію вже відкрита на офіційному веб-сайті Центру. Кількість місць обмежена, тому рекомендуємо реєструватися якомога швидше."
-        ] : [
-          "The Center for Strategic Use of Artificial Intelligence proudly announces its annual conference dedicated to 25 years of AI research in Ukraine. This landmark event will take place on November 15-16, 2024, bringing together leading experts, researchers, and innovators from around the world.",
-          "Over two days, participants will have the opportunity to explore the latest advances in artificial intelligence, discuss challenges and prospects for AI technology development in the context of the Ukrainian economy and society.",
-          "The conference program will include:",
-          "• Keynote speeches from leading global AI experts",
-          "• Panel discussions on ethical aspects of AI use",
-          "• Presentations of latest research from Ukrainian scientific institutions", 
-          "• Workshops on practical AI applications across various economic sectors",
-          "• Networking sessions for professional communication",
-          "Special attention will be paid to the impact of artificial intelligence on the transformation of the Ukrainian economy, particularly in the context of post-war reconstruction and integration with European standards.",
-          "The conference will also serve as a platform for presenting new Center initiatives, including international cooperation programs and educational projects aimed at developing AI talent.",
-          "Registration for the event is now open on the Center's official website. Space is limited, so we recommend registering as soon as possible."
-        ]
-      },
-      "article-1": {
-        id: "article-1", 
-        title: isUk
-          ? "Новий центр досліджень ШІ відкривається в Києві"
-          : "New AI Research Center Opens in Kyiv",
-        description: isUk
-          ? "Центр зосередиться на розробці рішень ШІ для сфер охорони здоров'я та освіти"
-          : "The center will focus on developing AI solutions for healthcare and education sectors",
-        category: isUk 
-          ? "Дослідження" 
-          : "Research",
-        date: "2024.11.10",
-        readTime: "5",
-        image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=300&fit=crop",
-        author: isUk 
-          ? "Д-р Марина Коваленко" 
-          : "Dr. Marina Kovalenko",
-        tags: isUk 
-          ? ["дослідження", "охорона здоров'я", "освіта", "Київ", "інновації"]
-          : ["research", "healthcare", "education", "Kyiv", "innovation"],
-        content: isUk ? [
-          "У Києві відкрився новий центр досліджень штучного інтелекту, який стане важливим кроком у розвитку AI-технологій в Україні. Центр розташований у сучасному науково-технологічному парку та оснащений найновішим обладнанням для проведення досліджень світового рівня.",
-          "Основні напрямки роботи центру:",
-          "• Розробка AI-рішень для діагностики та лікування захворювань",
-          "• Створення інтелектуальних освітніх платформ",
-          "• Дослідження етичних аспектів використання ШІ",
-          "• Підготовка спеціалістів у сфері штучного інтелекту",
-          "Центр планує співпрацювати з провідними медичними закладами України для впровадження AI-технологій в охороні здоров'я. Це включає розробку систем для раннього виявлення захворювань, оптимізації лікувальних процесів та покращення якості медичної допомоги.",
-          "У сфері освіти центр зосередиться на створенні персоналізованих навчальних систем, які зможуть адаптуватися до індивідуальних потреб кожного учня або студента.",
-          "Відкриття центру стало можливим завдяки підтримці Міністерства освіти і науки України та міжнародних партнерів."
-        ] : [
-          "A new artificial intelligence research center has opened in Kyiv, marking an important step in the development of AI technologies in Ukraine. The center is located in a modern science and technology park and is equipped with state-of-the-art equipment for conducting world-class research.",
-          "Main areas of the center's work:",
-          "• Development of AI solutions for disease diagnosis and treatment",
-          "• Creation of intelligent educational platforms", 
-          "• Research on ethical aspects of AI use",
-          "• Training specialists in artificial intelligence",
-          "The center plans to collaborate with leading medical institutions in Ukraine to implement AI technologies in healthcare. This includes developing systems for early disease detection, optimizing treatment processes, and improving the quality of medical care.",
-          "In education, the center will focus on creating personalized learning systems that can adapt to the individual needs of each student.",
-          "The opening of the center was made possible through support from Ukraine's Ministry of Education and Science and international partners."
-        ]
-      },
-      "article-2": {
-        id: "article-2",
-        title: isUk
-          ? "Україна приєднується до глобальної ініціативи з етики ШІ"
-          : "Ukraine Joins Global AI Ethics Initiative",
-        description: isUk
-          ? "Нове міжнародне партнерство має на меті встановити етичні керівні принципи для розвитку ШІ"
-          : "New international partnership aims to establish ethical guidelines for AI development",
-        category: isUk 
-          ? "Етика" 
-          : "Ethics",
-        date: "2024.11.08",
-        readTime: "6",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop",
-        author: isUk 
-          ? "Катерина Шевченко" 
-          : "Kateryna Shevchenko",
-        tags: isUk 
-          ? ["етика", "міжнародне співробітництво", "стандарти", "регулювання"]
-          : ["ethics", "international cooperation", "standards", "regulation"],
-        content: isUk ? [
-          "Україна офіційно приєдналася до Глобальної ініціативи з етики штучного інтелекту, що стало важливим кроком у формуванні міжнародних стандартів відповідального розвитку AI-технологій.",
-          "Ця ініціатива об'єднує понад 50 країн та міжнародних організацій з метою розробки спільних принципів етичного використання штучного інтелекту.",
-          "Основні цілі ініціативи:",
-          "• Розробка універсальних етичних стандартів для AI",
-          "• Створення механізмів контролю та моніторингу",
-          "• Обмін досвідом між країнами-учасницями",
-          "• Захист прав людини в епоху штучного інтелекту",
-          "Участь України в цій ініціативі відкриває нові можливості для співпраці з провідними світовими експертами в галузі етики AI та сприяє розвитку відповідального підходу до впровадження нових технологій."
-        ] : [
-          "Ukraine has officially joined the Global AI Ethics Initiative, marking an important step in shaping international standards for responsible AI technology development.",
-          "This initiative brings together over 50 countries and international organizations to develop common principles for ethical AI use.",
-          "Main goals of the initiative:",
-          "• Development of universal ethical standards for AI",
-          "• Creation of control and monitoring mechanisms", 
-          "• Experience sharing between participating countries",
-          "• Protection of human rights in the age of artificial intelligence",
-          "Ukraine's participation in this initiative opens new opportunities for collaboration with leading global experts in AI ethics and promotes a responsible approach to implementing new technologies."
-        ]
-      }
-    };
+  const article =
+    articles.find(item => item.id === id) ??
+    articles.find(item => item.id === "featured") ??
+    articles[0];
 
-    return allArticles[id as keyof typeof allArticles] || allArticles.featured;
-  };
+  if (!article) {
+    return (
+      <div className="p-10 text-center">
+        Article not found
+      </div>
+    );
+  }
 
-  const article = getArticleData(articleId || "featured");
 
   return (
     <div className="min-h-screen bg-white">
@@ -164,7 +40,7 @@ export function ArticlesDetailPage({ articleId }: ArticlesDetailPageProps) {
               className=" text-primary hover:text-primary-dark"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {isUk ? 'Назад до анонсів' : 'Back to Announcements'}
+              {isUk ? 'Назад до новин' : 'Back to News'}
             </Button>
           </Link>
         </div>
@@ -185,11 +61,11 @@ export function ArticlesDetailPage({ articleId }: ArticlesDetailPageProps) {
             <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-6">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
-                <span>{article.author}</span>
+                <span>{article.authors}</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2" />
-                <span>{article.date}</span>
+                <span>{article.dateTime}</span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-2" />
@@ -248,7 +124,7 @@ export function ArticlesDetailPage({ articleId }: ArticlesDetailPageProps) {
       <section className="pt-4 pb-8 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            {article.content.map((paragraph, index) => (
+            {(article.content ?? []).map((paragraph, index) => (
               <div key={index} className="mb-6">
                 {paragraph.startsWith('•') ? (
                   <div className="ml-4 text-base text-gray-800 leading-relaxed">

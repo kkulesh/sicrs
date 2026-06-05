@@ -5,10 +5,16 @@ export const HeaderContent: Record<string, {
   height: string;
 }> = {
   home: {
-    background: "/images/HeaderBackgrounds/60.jpg", //"/images/ai_background.jpg"
+    background: "/images/HeaderBackgrounds/35.jpg", //"/images/ai_background.jpg"
     bottomText1: "Штучний інтелект як інструмент майбутнього",
     bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
     height: "560px",
+  },
+  contactForm: {
+    background: "/images/HeaderBackgrounds/4.jpg", //"/images/ai_background.jpg"
+    bottomText1: "Форма",
+    bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
+    height: "400px",
   },
   partnership: {
     background: "/images/HeaderBackgrounds/background17.jpg", //"/images/1.jpg"
@@ -64,7 +70,7 @@ export const HeaderContent: Record<string, {
     height: "400px",
   },
   articleDetail: {
-    background: "/images/HeaderBackgrounds/background3.png",
+    background: "/images/HeaderBackgrounds/4.jpg",
     height: "200px",
   },
   publicationDetail: {

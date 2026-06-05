@@ -2,18 +2,18 @@ import { Button } from "../ui/button.js";
 import { useLanguage } from "../../contexts/LanguageContext.js";
 import { Link } from "react-router-dom";
 
-const CampusImage = "/images/campus.jpg";
+const BackgroundImage = "/images/HeaderBackgrounds/60.jpg";
 
-export function HomeHero() {
+export function FormHero() {
   const { t } = useLanguage();
 
   return (
     <section className="relative text-white overflow-hidden min-h-[50vh]  flex items-center">
-      {/* Campus Background Image */}
+      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `url(${CampusImage})`,
+          backgroundImage: `url(${BackgroundImage})`,
           zIndex: 0
         }}
       />
@@ -25,36 +25,26 @@ export function HomeHero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl font-medium mb-6 leading-tight drop-shadow-lg">
-              {t('homeHero.title')}
+              {t('formHero.title')}
             </h1>
             <p className="text-xl mb-8 text-gray-100 leading-relaxed drop-shadow-md">
-              {t('homeHero.subtitle')}
+              {t('formHero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/about-us">
+              <Link to="/contact-form">
                 <Button
-                  size="lg"
+                  size="xl"
                   variant="outline"
-                  className="border-white text-gray-900 hover:bg-gray-200 hover:text-gray-900 shadow-lg backdrop-blur-sm"
+                  className="text-lg border-white text-gray-900 hover:bg-gray-200 hover:text-gray-900 shadow-lg backdrop-blur-sm"
                 >
-                  {t("homeHero.learnMore")}
-                </Button>
-              </Link>
-
-              <Link to="/events">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-gray-900 hover:bg-gray-200 hover:text-gray-900 shadow-lg backdrop-blur-sm"
-                >
-                  {t("homeHero.ourEvents")}
+                  {t("formHero.form")}
                 </Button>
               </Link>
             </div>
           </div>
           
           <div className="relative">
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-2xl">
+            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-2xl flex flex-col justify-center">
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="bg-white/20 h-20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-white/20">
                   <svg className="w-8 h-8 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
@@ -73,18 +63,15 @@ export function HomeHero() {
                 </div>
               </div>
               <div className="space-y-2">
-                <p className="text-gray-100 text-md font-medium drop-shadow-md mb-4 flex justify-between">
-                  <span>{t('homeHero.description.line1')}</span>
-                  <span>{t('homeHero.description.line2')}</span>
-                  <span>{t('homeHero.description.line3')}</span>
+                <p className="text-gray-100 text-md font-medium drop-shadow-md flex justify-between">
+                  <span>{t('formHero.description.line1')}</span>
+                  <span>{t('formHero.description.line2')}</span>
+                  <span>{t('formHero.description.line3')}</span>
                 </p>
               </div>
             </div>
             
-            {/* University Connection Badge */}
-            <div className="absolute -bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/30 shadow-lg">
-              <p className="text-gray-900 text-sm font-medium">{t('homeHero.university')}</p>
-            </div>
+           
           </div>
         </div>
       </div>

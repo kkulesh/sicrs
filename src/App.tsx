@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { LanguageProvider } from "./contexts/LanguageContext.js";
 
 import { Header } from "./components/Header.js";
@@ -25,18 +26,37 @@ import { ExpertDetailPage } from "./components/ExpertDetailPage.js";
 import { ContactForm } from "./components/ContactForm.js";
 import { AdminContacts } from "./components/AdminContacts.js";
 
+function ScrollToHash() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const id = location.hash.substring(1);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.hash]);
+
+  return null;
+}
+
 function AppContent() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <StickyHeader />
+      <ScrollToHash />
 
       <Routes>
         {/* Головна */}
         <Route path="/" element={<HomePage />} />
 
-        {/* Оголошення */}
-        <Route path="/announcements/:id" element={<ArticlesDetailPage />} />
+        {/* Новини */}
+        <Route path="/news/:id" element={<ArticlesDetailPage />} />
 
         {/* Партнерство, контакти, дослідження */}
         <Route path="/partnership" element={<Partnership />} />
