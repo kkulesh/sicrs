@@ -111,10 +111,9 @@ export function ContactForm() {
               type="tel"
               id="phone"
               name="phone"
-              pattern="^\+?[1-9]\d{1,14}$"
+              pattern="^\+?[1-9]\d{0,14}$"
               title={t('contacts.formPhoneFormatHint') || "Введіть номер у міжнародному форматі (наприклад, +380XXXXXXXXX)"}
               placeholder="+380"
-              required
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
