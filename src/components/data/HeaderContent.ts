@@ -11,13 +11,13 @@ export const HeaderContent: Record<string, {
     height: "450px",
   },
   contactForm: {
-    background: "/images/HeaderBackgrounds/13.jpg", //"/images/ai_background.jpg"
+    background: "/images/HeaderBackgrounds/18.png", //"/images/ai_background.jpg"
     bottomText1: "Форма",
     bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
     height: "450px",
   },
   articleDetail: {
-    background: "/images/HeaderBackgrounds/13.jpg",
+    background: "/images/HeaderBackgrounds/18.png",
     height: "200px",
   },
   fallback: {

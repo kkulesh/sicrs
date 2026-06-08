@@ -107,7 +107,7 @@ export function ArticlesDetailPage() {
 
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag, index) => (
-                <Badge key={index} variant="secondary" className="bg-gray-100 text-gray-700">
+                <Badge key={index} variant="secondary" className="bg-gray-100 text-gray-800 text-lg">
                   <Tag className="w-3 h-3 mr-1" />
                   {tag}
                 </Badge>
@@ -151,7 +151,7 @@ export function ArticlesDetailPage() {
       {/* Article Content */}
       <section className="pt-4 pb-8 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-sm text-gray-700">
+          <div className="mx-auto max-w-3xl text-gray-900">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
@@ -167,35 +167,35 @@ export function ArticlesDetailPage() {
                 ),
 
                 p: ({ children }) => (
-                  <p className="text-sm font-normal text-gray-700 leading-relaxed mb-6">
+                  <p className="text-lg font-normal text-gray-900 leading-relaxed mb-6">
                     {children}
                   </p>
                 ),
 
                 strong: ({ children }) => (
-                  <span className="font-normal text-gray-700">
+                  <strong className="font-semibold text-gray-900">
                     {children}
-                  </span>
+                  </strong>
                 ),
 
                 em: ({ children }) => (
-                  <em className="not-italic text-gray-700">{children}</em>
+                  <em className="italic text-gray-900">{children}</em>
                 ),
 
                 ul: ({ children }) => (
-                  <ul className="list-disc pl-6 mb-6 text-sm text-gray-700">
+                  <ul className="list-disc pl-6 mb-6 text-base text-gray-900">
                     {children}
                   </ul>
                 ),
 
                 ol: ({ children }) => (
-                  <ol className="list-decimal pl-6 mb-6 text-sm text-gray-700">
+                  <ol className="list-decimal pl-6 mb-6 text-base text-gray-900">
                     {children}
                   </ol>
                 ),
 
                 li: ({ children }) => (
-                  <li className="text-sm text-gray-700 leading-relaxed mb-2">
+                  <li className="text-base text-gray-900 leading-relaxed mb-2">
                     {children}
                   </li>
                 ),

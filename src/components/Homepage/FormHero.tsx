@@ -20,7 +20,7 @@ export function FormHero() {
       /> */}
       
       {/* Subtle dark overlay for text readability only */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" style={{ zIndex: 1 }} />
+      {/* <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" style={{ zIndex: 1 }} /> */}
 
       <div
         className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 
@@ -41,7 +41,7 @@ export function FormHero() {
               <Button
                 size="xl"
                 variant="outline"
-                className="text-lg text-gray-900 hover:bg-gray-300 hover:text-gray-900 shadow-lg shadow-black hover:shadow-xl hover:shadow-black backdrop-blur-sm transfrom-shadow duration-500"
+                className="text-lg text-gray-900 hover:bg-gray-300 hover:text-gray-900 shadow-md shadow-black/50 hover:shadow-lg hover:shadow-black/50 backdrop-blur-sm transfrom-shadow duration-500"
               >
                 {t("formHero.form")}
               </Button>

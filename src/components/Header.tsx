@@ -141,23 +141,23 @@ export function Header() {
               <div className={`flex items-center justify-between w-full transition-all duration-300 ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                 <div className="flex items-center space-x-8 text-lg">
 
-                  <Link to="#about-us" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                  <Link to="/#about-us" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.about')}
                   </Link>
                   
-                  <Link to="#news" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                  <Link to="/#news" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.news')}
                   </Link>
 
-                  <Link to="#partners" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                  <Link to="/#partners" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.partnership')}
                   </Link>
 
-                  <Link to="#experts" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                  <Link to="/#experts" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.experts')}
                   </Link>
 
-                  <Link to="#footer" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                  <Link to="/#footer" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.contacts')}
                   </Link>
 

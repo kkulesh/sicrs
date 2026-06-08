@@ -73,9 +73,13 @@ export function Footer() {
               </div>
               */}
 
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-3" /> {t('footer.email')}
-              </div>
+              <a
+                href={`mailto:${t('footer.email')}`}
+                className="flex items-center hover:underline"
+              >
+                <Mail className="w-4 h-4 mr-3" />
+                {t('footer.email')}
+              </a>
               <div className="flex items-center">
               <Link
                 to={localizePath(language, "/contact-form")}
