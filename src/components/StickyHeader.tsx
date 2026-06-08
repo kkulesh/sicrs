@@ -97,14 +97,14 @@ export function StickyHeader({ currentPage = "home", onNavigate, onAnnouncementC
 
               {/* Title - Hidden on mobile */}
               <div className="hidden lg:block">
-                <h1 className="text-white text-lg font-medium leading-tight">
+                <h1 className="text-white text-lg font-medium leading-tight font-sans">
                   {t('stickyHeader.title')}
                 </h1>
               </div>
             </div>
 
             {/* Center - Search */}
-            <div className="flex-1 max-w-md mx-4 relative">
+            <div className="flex-1 max-w-2xl mx-4 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-600" />
             
             {isSearchOpen ? (
@@ -174,7 +174,7 @@ export function StickyHeader({ currentPage = "home", onNavigate, onAnnouncementC
                   <Button 
                     variant="ghost" 
                     size="lg" 
-                    className="flex items-center justify-center text-white/90 hover:text-gray-900 hover:bg-gray-100 h-12 w-12 p-0 rounded-full"
+                    className="flex items-center justify-center text-white/90 hover:text-gray-900 hover:bg-gray-100 h-9 w-9 p-0 rounded-full"
                   >
                     <Menu className="w-8 h-8" />
                   </Button>

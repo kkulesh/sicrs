@@ -1,14 +1,15 @@
 import { Badge } from "../ui/badge.js";
 import { useLanguage } from "../../contexts/LanguageContext.js";
+import { localizePath } from "../../utils/routeHelpers.js";
 import { Link } from "react-router-dom";
 import { Articles } from "../data/ArticlesData.js";
+import { ImageWithFallback } from "../figma/ImageWithFallback.js";
 
 export function NewsSection() {
   const { t, language } = useLanguage();
   const isUk = language === "uk";
 
   const news = Articles(isUk);
-  const placeholderImg = "/images/placeholder.jpg";
 
   return (
     <section id="news" className="scroll-mt-[60px] py-16 bg-gray-50">
@@ -23,32 +24,24 @@ export function NewsSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          {/* Large featured news */}
+          {/* Large featured news 
           {news[0] && (
             <Link
-              to={`/news/${news[0].id}`}
+              to={localizePath(language, `/news/${news[0].slug}`)}
               className="lg:col-span-1 lg:row-span-2 relative h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <img
-                src={news[0].image ?? placeholderImg}
+                src={news[0].image}
                 alt={news[0].title ?? ""}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-              <div className="absolute top-4 left-4">
-                <Badge className="bg-white text-gray-900 hover:bg-white text-sm font-medium">
-                  {news[0].category}
-                </Badge>
-              </div>
-
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h3 className="text-xl font-medium leading-tight mb-3 group-hover:text-blue-300 transition-colors">
                   {news[0].title}
                 </h3>
-                <p className="text-white/90 text-sm mb-3 line-clamp-2">
-                  {news[0].authors}
-                </p>
+
                 <p className="text-white/80 text-sm mb-4">
                   {news[0].dateFull}
                 </p>
@@ -66,10 +59,16 @@ export function NewsSection() {
               </div>
             </Link>
           )}
+          */}
 
           {/* Smaller news */}
-          <div className="lg:col-span-2 grid grid-rows-2 gap-6">
-            {[news.slice(1, 3), news.slice(3, 5)].map(
+          <div className="lg:col-span-3 flex justify-center">
+            <div className="w-full max-w-[1030px] grid grid-rows-2 gap-6">
+
+          {/* <div className="lg:col-span-2 grid grid-rows-2 gap-6 items-center"> 
+                {[news.slice(1, 3), news.slice(3, 5)].map( */}
+
+            {[news.slice(0, 2), news.slice(2, 4)].map(
               (group, gIndex) => (
                 <div
                   key={gIndex}
@@ -78,17 +77,17 @@ export function NewsSection() {
                   {group.map((news) => (
                     <Link
                       key={news.id}
-                      to={`/news/${news.id}`}
-                      className="relative h-[285px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
+                      to={localizePath(language, `/news/${news.slug}`)}
+                      className="relative h-[285px] rounded-lg overflow-hidden shadow-primary/20 shadow-lg hover:shadow-primary/40 hover:shadow-xl transition-all duration-300 group"
                     >
-                      <img
-                        src={news.image ?? placeholderImg}
+                      <ImageWithFallback
+                        src={news.image}
                         alt={news.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                      <div className="absolute top-4 left-4">
+                      {/* <div className="absolute top-4 left-4">
                         <Badge
                           className={`text-white text-xs font-medium ${
                             news?.category?.toLowerCase().includes(
@@ -124,7 +123,7 @@ export function NewsSection() {
                         >
                           {news.category}
                         </Badge>
-                      </div>
+                      </div> */}
 
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                         <h3 className="text-base font-medium leading-tight mb-2 group-hover:text-blue-200 transition-colors line-clamp-2">
@@ -163,6 +162,7 @@ export function NewsSection() {
             )}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -3,10 +3,12 @@ import { Card, CardContent } from "./ui/card.js";
 import { Badge } from "./ui/badge.js";
 import { Megaphone, Calendar, Database, User, FileText, Users } from 'lucide-react';
 import { useLanguage } from "../contexts/LanguageContext.js";
+import { localizePath } from "../utils/routeHelpers.js";
 import { Link } from "react-router-dom";
 
 interface SearchResult {
   id: string;
+  slug: string;
   type: 'news' ; // | 'contact-form' | 'publication' | 'dataset' | 'event' | 'expert' | 'team'
   title: string;
   description?: string;
@@ -24,17 +26,17 @@ interface SearchResultsProps {
 }
 
 export function SearchResults({ searchQuery, results, onClose }: SearchResultsProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   if (!searchQuery.trim()) return null;
 
   // Мапа для побудови URL
-  const getRoute = (type: SearchResult['type'], id: string) => {
+  const getRoute = (type: SearchResult['type'], slug: string) => {
     switch (type) {
       case 'news':
-        return `/news/${id}`;
+        return localizePath(language, `/news/${slug}`);
       default:
-        return `/`; // fallback
+        return localizePath(language, '/'); // fallback
     }
   };
 
@@ -68,7 +70,7 @@ export function SearchResults({ searchQuery, results, onClose }: SearchResultsPr
           {results.map((result) => (
             <Link
               key={result.id}
-              to={getRoute(result.type, result.id)}
+              to={getRoute(result.type, result.slug)}
               className="block mb-2"
               onClick={onClose} // закривати пошук після кліку
             >

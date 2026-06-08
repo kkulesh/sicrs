@@ -14,6 +14,19 @@ interface CookieConsent {
   preferences: boolean;
 }
 
+const CONSENT_COOKIE = "cookieConsent";
+
+const getSavedConsent = (): CookieConsent | null => {
+  const stored = Cookies.get(CONSENT_COOKIE);
+  if (!stored) return null;
+
+  try {
+    return JSON.parse(stored) as CookieConsent;
+  } catch {
+    return null;
+  }
+};
+
 export function CookieBanner() {
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
@@ -26,31 +39,29 @@ export function CookieBanner() {
   });
 
   useEffect(() => {
-    // Читаємо збережену згоду з cookie
-    const necessary = Cookies.get("necessary");
-    const analytics = Cookies.get("analytics");
-    const marketing = Cookies.get("marketing");
-    const preferences = Cookies.get("preferences");
-
-    if (!necessary && !analytics && !marketing && !preferences) {
-      // Показуємо банер, якщо немає cookie
-      setTimeout(() => setIsVisible(true), 1000);
+    const savedConsent = getSavedConsent();
+    if (savedConsent) {
+      setConsent(savedConsent);
+      setIsVisible(false);
     } else {
-      setConsent({
-        necessary: necessary === "1",
-        analytics: analytics === "1",
-        marketing: marketing === "1",
-        preferences: preferences === "1",
-      });
+      setTimeout(() => setIsVisible(true), 1000);
     }
   }, []);
 
   const saveConsent = (consentData: CookieConsent) => {
+    Cookies.set(CONSENT_COOKIE, JSON.stringify(consentData), { expires: 180, path: "/" });
+    Cookies.set("cookieConsentDate", new Date().toISOString(), { expires: 180, path: "/" });
+
     Cookies.set("necessary", consentData.necessary ? "1" : "0", { expires: 180, path: "/" });
     Cookies.set("analytics", consentData.analytics ? "1" : "0", { expires: 180, path: "/" });
     Cookies.set("marketing", consentData.marketing ? "1" : "0", { expires: 180, path: "/" });
     Cookies.set("preferences", consentData.preferences ? "1" : "0", { expires: 180, path: "/" });
-    Cookies.set("cookieConsentDate", new Date().toISOString(), { expires: 180, path: "/" });
+
+    setConsent(consentData);
+
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("cookieConsentChanged", { detail: consentData }));
+    }
   };
 
   const handleAcceptAll = () => {

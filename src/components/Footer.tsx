@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import React, { useEffect } from 'react';
 import { useLanguage } from "../contexts/LanguageContext.js";
+import { localizePath } from "../utils/routeHelpers.js";
 import { Link, useLocation } from "react-router-dom";
 
 
@@ -15,14 +16,14 @@ export function Footer() {
 
   const navLinks = [
     { key: "home", label: t('header.nav.home'), path: "/" },
-    { key: "news", label: t('header.topNav.news'), path: "/#news" },
     { key: "about-us", label: t('header.topNav.about'), path: "/#about-us" },
-    { key: "partnerships", label: t('header.topNav.partnership'), path: "/#partnerships" },
-    { key: "contactForm", label: t('footer.contactFormLink'), path: "/contact-form" },
+    { key: "news", label: t('header.topNav.news'), path: "/#news" },
+    { key: "partners", label: t('header.topNav.partnership'), path: "/#partners" },
+    { key: "experts", label: t('header.topNav.experts'), path: "/#experts" }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer id="footer" className="scroll-mt-[60px] bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
@@ -30,10 +31,10 @@ export function Footer() {
 
             {/* Footer Logo + Title */}
             <Link 
-              to="/" 
+              to={localizePath(language, "/")} 
               className="flex items-center gap-3 group mb-6"
               onClick={(e) => {
-                if (location.pathname === "/") {
+                if (location.pathname === localizePath(language, "/")) {
                   e.preventDefault(); // зупиняємо стандартну поведінку, бо вже на HomePage 
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
@@ -51,10 +52,10 @@ export function Footer() {
 
               {/* Text: Title + Subtitle */}
               <div className="text-left font-sans">
-                <h1 className={`text-white text-sm font-medium whitespace-pre-line ${isUk ? "leading-extra-tight" : "leading-super-tight"}`}>
+                <h1 className={`text-white text-sm font-medium whitespace-pre-line ${isUk ? "leading-normal" : "leading-normal"}`}>
                   {t('footer.title')}
                 </h1>
-                <p className={`text-gray-300 text-xs whitespace-pre-line ${isUk ? "leading-extra-tight" : "leading-super-tight"} max-w-md`}>
+                <p className={`text-gray-300 text-xs whitespace-pre-line ${isUk ? "leading-normal" : "leading-normal"} max-w-md`}>
                   {t('footer.subtitle')}
                 </p>
               </div>
@@ -75,25 +76,35 @@ export function Footer() {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3" /> {t('footer.email')}
               </div>
+              <div className="flex items-center">
+              <Link
+                to={localizePath(language, "/contact-form")}
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                {t('footer.contactFormLink')}
+              </Link>
+            </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-medium mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              {navLinks.map(link => (
-                <li key={link.key}>
-                  <Link
-                    to={link.path}
-                    className={`text-sm-base transition-colors hover:text-white block ${
-                      location.pathname === link.path ? "text-white font-medium" : "text-gray-300"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map(link => {
+                const path = localizePath(language, link.path);
+                return (
+                  <li key={link.key}>
+                    <Link
+                      to={path}
+                      className={`text-sm-base transition-colors hover:text-white block ${
+                        location.pathname === path ? "text-white font-medium" : "text-gray-300"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -119,7 +130,7 @@ export function Footer() {
         
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm font-sans">
             {t('footer.caption')}
           </p>
         </div>

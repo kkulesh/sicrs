@@ -4,6 +4,7 @@ import { Articles } from "../components/data/ArticlesData.js";
 
 interface SearchResult {
   id: string;
+  slug: string;
   type: 'news' ;
   title: string;
   description?: string;
@@ -26,6 +27,7 @@ export function useSearch() {
     return news.map(news => {
       const item: SearchResult = {
         id: news.id,
+        slug: news.slug,
         type: "news",
         title: news.title,
         description: news.description ?? "",

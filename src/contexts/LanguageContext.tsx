@@ -1,7 +1,7 @@
 import { StickyHeader } from '@/components/StickyHeader.js';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type Language = 'uk' | 'en';
+export type Language = 'uk' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -64,8 +64,9 @@ const ukrainianTranslations = {
     subtitle: "Society for industrial recovery\n& community resilience studies",
     topNav: {
       news: "Новини",
-      partnership: "Партнерства",
+      partnership: "Партнери",
       contacts: "Контакти",
+      experts: "Експерти",
       about: "Про нас"
     },
     bottomNav: {
@@ -86,7 +87,7 @@ const ukrainianTranslations = {
       contacts: "Контакти"
     },
     bottomText1: {
-      home: "Штучний інтелект\n як інструмент майбутнього",
+      home: "Наукове товариство з досліджень відновлення\nпромисловості та резильєнтності територіальних громад",
       partnership: "Партнерство",
       contacts: "Наші контакти",
       about: "Про наш центр",
@@ -152,7 +153,7 @@ const ukrainianTranslations = {
     quickLinks: "Швидкі посилання",
     contact: "Контакти",
     followUs: "Слідкуйте за нами",
-    caption: "© 2026 Наукове товариство з досліджень відновлення промисловості та резильєнтності територіальних громад. Всі права захищені.",
+    caption: "© 2026 SICRS. Всі права захищені.",
     address: "пр. Берестейський, 37, Київ, 03056, Україна",
     phone: "+380 44 204 8000",
     email: "hellosicrs@gmail.com",
@@ -161,7 +162,7 @@ const ukrainianTranslations = {
   formHero: {
     title: "Залиште контакти для співпраці",
     subtitle: "Розроблення інноваційних рішень у сфері штучного інтелекту в стратегічних секторах економіки",
-    form:"Форма зворотного зв'язку",
+    form:"Форма вступу в базу даних",
     learnMore: "Дізнатися більше",
     ourEvents: "Наші події",
     description: {
@@ -172,23 +173,23 @@ const ukrainianTranslations = {
     university: "КПІ ім. Ігоря Сікорського"
   },
   tasks: {
-    title: "Про наше товариство",
-    subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
+    title: "Про нас",
+    subtitle: "Ми працюємо над створенням комплексної аналітичної та дослідницької екосистеми для підтримки відновлення промисловості та розвитку територіальних громад України на основі даних, доказової аналітики та міжнародного партнерства.",
     analyticalResearch: {
       title: "Аналітичні дослідження",
-      description: "Проведення глибинних досліджень у сфері штучного інтелекту та його застосування в різних галузях економіки."
+      description: "Проведення міждисциплінарних досліджень у сфері відновлення економіки, промислового розвитку та підвищення спроможності територіальних громад."
     },
     consulting: {
       title: "Консультування стейкхолдерів",
-      description: "Надання експертних консультацій для бізнесу, державного сектору та наукових установ."
+      description: "Надання експертної підтримки для органів державної влади, місцевого самоврядування, міжнародних організацій та бізнесу щодо прийняття рішень на основі даних."
     },
     education: {
       title: "Навчання та поширення досвіду",
-      description: "Організація освітніх програм, семінарів та воркшопів для підвищення кваліфікації фахівців."
+      description: "Організація воркшопів, наукових семінарів та міжнародних програм обміну для розвитку експертного середовища у сфері відновлення та регіональної політики."
     },
     strategy: {
       title: "Обговорення стратегій та інновацій",
-      description: "Розробка та впровадження інноваційних стратегій використання ШІ в ключових секторах економіки."
+      description: "Розробка та впровадження інноваційних підходів до відновлення громад, промислової трансформації та формування стійких територіальних екосистем."
     }
   },
   initiatives: {
@@ -215,8 +216,14 @@ const ukrainianTranslations = {
       tags: ["Партнерство", "Співпраця", "Міжнародні зв'язки"]
     }
   },
+  homeAbout: {
+    title: "",
+    text: "SICRS — це міжнародне наукове товариство, яке об’єднує дослідників, експертів, представників громад та міжнародних партнерів для розробки практичних рішень у сфері відновлення промисловості, розвитку територіальних громад та підвищення їхньої стійкості. Ми працюємо на перетині науки, даних та практики, перетворюючи дослідження й аналітику на інструменти, що допомагають громадам, інституціям та партнерам приймати обґрунтовані рішення для відновлення та довгострокового розвитку. Через дослідження, міжнародну співпрацю, аналітичні продукти та платформу IRCCN ми створюємо середовище, де знання перетворюються на реальні зміни.",
+    quote: "\"Дані та докази самі по собі не змінюють реальність — зміни народжуються тоді, коли знання поєднуються з практикою.\"",
+    author: "— Ольга Іляш"
+  },
   homePartnerships: {
-    title: "Наші партнери",
+    title: "Партнери",
     subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
     analyticalResearch: {
       title: "Аналітичні дослідження",
@@ -234,6 +241,9 @@ const ukrainianTranslations = {
       title: "Обговорення стратегій та інновацій",
       description: "Розробка та впровадження інноваційних стратегій використання ШІ в ключових секторах економіки."
     }
+  },
+  homeExperts: {
+    title: "Експерти",
   },
   stats: {
     title: "Результати нашої роботи",
@@ -559,8 +569,9 @@ const englishTranslations = {
     subtitle: "Society for industrial recovery\n& community resilience studies",
     topNav: {
       news: "News",
-      partnership: "Partnerships",
+      partnership: "Partners",
       contacts: "Contacts",
+      experts: "Experts",
       about: "About us"
     },
     bottomNav: {
@@ -581,7 +592,7 @@ const englishTranslations = {
       contacts: "Contacts"
     },
     bottomText1: {
-      home: "Artificial Intelligence\n as a Tool of the Future",
+      home: "Society for Industrial Recovery\n& Community Resilience Studies ",
       partnership: "Partnership",
       contacts: "Our Contacts",
       about: "About Our Center",
@@ -646,16 +657,16 @@ const englishTranslations = {
     quickLinks: "Quick Links",
     contact: "Contact",
     followUs: "Follow Us",
-    caption: "© 2026 Society for Industrial Recovery & Community Resilience Studies. All Rights Reserved.",
+    caption: "© 2026 SICRS. All Rights Reserved.",
     address: "37 Beresteiskyi Ave, Kyiv, 03056, Ukraine",
     phone: "+380 44 204 8000",
-    email: "info@ai-center.kpi.ua",
+    email: "hellosicrs@gmail.com",
     contactFormLink: "Contact Form"
   },
   formHero: {
     title: "Building Expert Environment in AI Field",
     subtitle: "Developing innovative solutions in artificial intelligence for strategic economic sectors",
-    form:"Feedback form",
+    form:"Database entry form",
     learnMore: "Learn More",
     ourEvents: "Our Events",
     description: {
@@ -666,23 +677,23 @@ const englishTranslations = {
     university: "Igor Sikorsky Kyiv Polytechnic Institute"
   },
   tasks: {
-    title: "Center's Objectives",
-    subtitle: "We work on creating a comprehensive ecosystem for artificial intelligence development in Ukraine",
+    title: "About us",
+    subtitle: "We are working to build a comprehensive analytical and research ecosystem that supports industrial recovery and the development of territorial communities in Ukraine through data-driven approaches, evidence-based analysis, and international partnership.",
     analyticalResearch: {
       title: "Analytical Research",
-      description: "Conducting in-depth research in artificial intelligence and its applications across various economic sectors."
+      description: "Conducting interdisciplinary research in industrial recovery, economic development, and strengthening the capacity of territorial communities."
     },
     consulting: {
       title: "Stakeholder Consulting",
-      description: "Providing expert consultations for business, government sector, and research institutions."
+      description: "Providing expert support to government institutions, local authorities, international organizations, and businesses in evidence-based decision-making."
     },
     education: {
       title: "Training and Knowledge Sharing",
-      description: "Organizing educational programs, seminars, and workshops for professional development."
+      description: "Organizing workshops, academic seminars, and international exchange programs to develop expertise in recovery, regional development, and public policy."
     },
     strategy: {
       title: "Strategy and Innovation Discussion",
-      description: "Developing and implementing innovative strategies for AI use in key economic sectors."
+      description: "Designing and implementing innovative approaches to community recovery, industrial transformation, and the formation of resilient territorial ecosystems."
     }
   },
   initiatives: {
@@ -709,9 +720,15 @@ const englishTranslations = {
       tags: ["Partnership", "Collaboration", "International Relations"]
     }
   },
+  homeAbout: {
+    title: "",
+    text: "SICRS is an international scientific society that brings together researchers, experts, community representatives, and international partners to develop practical solutions for industrial recovery, territorial community development, and strengthening resilience. We operate at the intersection of science, data, and practice, transforming research and analytics into tools that help communities, institutions, and partners make evidence-based decisions for recovery and long-term development. Through research, international collaboration, analytical products, and the IRCCN platform, we create an environment where knowledge is transformed into real change.",
+    quote: "\"Data and evidence alone do not change reality — change emerges when knowledge is combined with practice.\"",
+    author: "— Olga Ilyash"
+  },
   homePartnerships: {
-    title: "Our Partners",
-    subtitle: "Ми працюємо над створенням комплексної екосистеми для розвитку штучного інтелекту в Україні",
+    title: "Partners",
+    subtitle: "We are working on creating a comprehensive ecosystem for the development of artificial intelligence in Ukraine.",
     analyticalResearch: {
       title: "Аналітичні дослідження",
       description: "Проведення глибинних досліджень у сфері штучного інтелекту та його застосування в різних галузях економіки."
@@ -728,6 +745,9 @@ const englishTranslations = {
       title: "Обговорення стратегій та інновацій",
       description: "Розробка та впровадження інноваційних стратегій використання ШІ в ключових секторах економіки."
     }
+  },
+  homeExperts: {
+    title: "Experts",
   },
   stats: {
     title: "Results of Our Work",
@@ -782,7 +802,7 @@ const englishTranslations = {
     phoneLabel: "Phone:",
     phone: "+380 44 204 8000",
     emailLabel: "Email:",
-    email: "info@ai-center.kpi.ua",
+    email: "hellosicrs@gmail.com",
     workingHours: "Working Hours:",
     workingDays: "Monday - Friday",
     workingTime: "9:00 AM - 6:00 PM",

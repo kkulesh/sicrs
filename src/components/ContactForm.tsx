@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext.js';
 import { Send } from 'lucide-react';
+import {
+  usePageTracking,
+  useScrollTracking,
+  useTimeTracking,
+} from "../analytics/analytics.js";
 
 export function ContactForm() {
   const { t } = useLanguage();
   
+  usePageTracking();
+  useScrollTracking();
+  useTimeTracking();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

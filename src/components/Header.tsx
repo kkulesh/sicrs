@@ -4,6 +4,7 @@ import { Input } from "./ui/input.js";
 import { Globe, Search, Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "./ui/sheet.js";
 import { useLanguage } from "../contexts/LanguageContext.js";
+import { localizePath, stripLangPrefix } from "../utils/routeHelpers.js";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HeaderContent } from "./data/HeaderContent.js";
 import { SideMenu } from "./SideMenu.js";
@@ -25,7 +26,7 @@ export function Header() {
   // Мапимо URL на ключ для HeaderContent основних сторінок
   const routeToPage: Record<string, string> = {
     "/": "home",
-    "/contact-form": "contactForm",
+    "/contacts": "contacts",
     "/publications": "publications",
     "/events": "events",
     "/experts": "experts",
@@ -42,14 +43,15 @@ export function Header() {
     "/about-us/team/": "teamMemberDetail"
   };
 
+  const normalizedPath = location.pathname.replace(/^\/(en|uk)(?=\/|$)/, '') || '/';
 
   // Перевіряємо спочатку детальні маршрути
-    const detailPage = Object.entries(detailRoutes).find(([prefix]) =>
-      location.pathname.startsWith(prefix)
-    )?.[1];
+  const detailPage = Object.entries(detailRoutes).find(([prefix]) =>
+    normalizedPath.startsWith(prefix)
+  )?.[1];
 
   // Якщо це детальна сторінка — використовуємо окремий фон
-  const currentPage = detailPage ?? routeToPage[location.pathname] ?? "home";
+  const currentPage = detailPage ?? routeToPage[normalizedPath] ?? "home";
 
   const pageData = HeaderContent[currentPage] ?? HeaderContent.fallback ?? {
     background: "",
@@ -60,12 +62,16 @@ export function Header() {
 
   const handleNavigation = (page: string) => {
     setIsMenuOpen(false);
-    navigate("/" + page); // наприклад, navigate("/publications")
+    const target = localizePath(language, page ? `/${page}` : '/');
+    navigate(target);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "uk" ? "en" : "uk");
+    const nextLanguage = language === "uk" ? "en" : "uk";
+
+    // Only switch the language in state — do not change the URL (remove /en /uk prefixes)
+    setLanguage(nextLanguage);
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,8 +93,8 @@ export function Header() {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div> 
 
       {/* Header Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full pt-12">
@@ -96,7 +102,7 @@ export function Header() {
 
           {/* Logo Section */}
           <div className="flex-shrink-0 font-sans">
-            <Link to="/" className="flex items-center space-x-4 cursor-pointer group">
+            <Link to={localizePath(language, "/")} className="flex items-center space-x-4 cursor-pointer group">
             
             {/* Center Logo */}
             <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
@@ -109,17 +115,17 @@ export function Header() {
 
             {/* Title - Hidden on mobile */}
             <div
-              className={`hidden sm:block mt-2 max-w-xs overflow-hidden font-sans${
-                isUk ? "leading-tight" : "leading-super-tight"
+              className={`hidden sm:block max-w-xs overflow-hidden font-sans${
+                isUk ? "leading-tight" : "leading-tight"
               }`}
             >
-              <h1 className={`text-white text-xl font-medium whitespace-pre-line ${
-                isUk ? "leading-tight" : "leading-super-tight"
+              <h1 className={`text-white text-2xl font-medium whitespace-pre-line ${
+                isUk ? "leading-snug" : "leading-snug"
               }`}>
                 {t("header.title")}
               </h1>
               <p className={`text-white/80 text-lg whitespace-pre-line ${
-                isUk ? "leading-tight" : "leading-super-tight"
+                isUk ? "leading-tight" : "leading-tight"
               }`}>
                 {t("header.subtitle")}
               </p>
@@ -134,37 +140,26 @@ export function Header() {
               {/* Top navigation row */}
               <div className={`flex items-center justify-between w-full transition-all duration-300 ${isSearchOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                 <div className="flex items-center space-x-8 text-lg">
-                  
-                  <a href="#news" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
-                    {t('header.topNav.news')}
-                  </a>
-                  
-                  <a href="#about-us" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+
+                  <Link to="#about-us" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
                     {t('header.topNav.about')}
-                  </a>
-
-                  <a href="#partnerships"
-                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
-                        currentPage === "partnership"
-                          ? "text-white bg-white/20 shadow-lg"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      {t('header.topNav.partnership')}
-                    </a>
-
-                  <Link 
-                    to="/contact-form"
-                    className={`text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-full ${
-                        currentPage === "contact-form"
-                          ? "text-white bg-white/20 shadow-lg"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                      }`}
-                    >
-                      {t('contacts.contactForm')}
-                    </Link>
-
+                  </Link>
                   
+                  <Link to="#news" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.news')}
+                  </Link>
+
+                  <Link to="#partners" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.partnership')}
+                  </Link>
+
+                  <Link to="#experts" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.experts')}
+                  </Link>
+
+                  <Link to="#footer" className="px-3 py-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all">
+                    {t('header.topNav.contacts')}
+                  </Link>
 
                   <Button onClick={toggleLanguage} variant="ghost" size="sm" className="text-white/90 hover:text-white hover:bg-white/10 h-10 px-4 rounded-full flex items-center">
                     <Globe className="w-5 h-5 mr-2" />
@@ -274,7 +269,7 @@ export function Header() {
                   <Button
                     variant="ghost"
                     size="2xl"
-                    className="text-white hover:bg-white/10 p-10 h-8 w-10 rounded-full"
+                    className="text-white hover:bg-white/10 p-10 h-8 w-8 rounded-full"
                   >
                     <Menu className="h-8 w-10" />
                   </Button>
@@ -321,9 +316,9 @@ export function Header() {
               return (
                 <div className="absolute bottom-12 text-left space-y-4">
                   {bottomText1 && (
-                    <p className="text-white text-4.75xl font-bold max-w-2xl leading-snug whitespace-pre-line">
+                    <p className="text-white text-3xl font-bold max-w-4xl leading-snug whitespace-pre-line">
                       {bottomText1}
-                    </p>
+                    </p> // 4.75xl
                   )}
                   {bottomText2 && (
                     <p className="text-white text-xl font-medium max-w-lg leading-relaxed whitespace-pre-line">

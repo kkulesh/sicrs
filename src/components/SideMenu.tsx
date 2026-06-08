@@ -24,7 +24,14 @@ export function SideMenu({ onNavigate, onCloseMenu }: SideMenuProps) {
   };
 
   // Меню розбите на секції
-  const sections = [
+  type MenuItem = {
+    label: string;
+    icon: React.ReactNode;
+    to: string;
+    page?: string;
+  };
+
+  const sections: MenuItem[][] = [
     [
       {
         label: t("header.nav.home"),
@@ -35,36 +42,41 @@ export function SideMenu({ onNavigate, onCloseMenu }: SideMenuProps) {
     ],
     [
       {
+        label: t("header.topNav.about"),
+        icon: <Info className="w-4 h-4 mr-3" />,
+        to: "/#about-us",
+      },
+      {
         label: t("header.topNav.news"),
         icon: <Megaphone className="w-4 h-4 mr-3" />,
         to: "/#news",
-      },
-      {
-        label: t("header.topNav.about"),
-        icon: <Users className="w-4 h-4 mr-3" />,
-        to: "/#about-us",
-      },
+      }
     ],
     [
       {
         label: t("header.topNav.partnership"),
         icon: <Handshake className="w-4 h-4 mr-3" />,
-        to: "/#partnerships",
+        to: "/#partners",
       },
-
       {
-        label: t("contacts.contactForm"),
-        icon: <FileText className="w-4 h-4 mr-3" />,
-        to: "/contact-form",
-        page: "contact-form",
+        label: t("header.topNav.experts"),
+        icon: <Users className="w-4 h-4 mr-3" />,
+        to: "/#experts",
       },
     ],
+    [
+      {
+        label: t("header.topNav.contacts"),
+        icon: <FileText className="w-4 h-4 mr-3" />,
+        to: "/#footer",
+      }
+    ]
   ];
 
   return (
-    <div className="flex-1 overflow-y-auto">
+    <div className="flex-1 overflow-y-auto mx-4">
       {sections.map((section, secIdx) => (
-        <div key={secIdx} className="space-y-1">
+        <div key={secIdx} className="space-y-2">
           {section.map((item, idx) => {
             const hashLinkActive =
               item.to.startsWith("/#") &&
@@ -79,7 +91,7 @@ export function SideMenu({ onNavigate, onCloseMenu }: SideMenuProps) {
                 className={`w-full flex items-center justify-start text-left text-[15px] h-11 px-4 rounded-full ${
                   location.pathname === item.to || hashLinkActive
                     ? "bg-white text-gray-900 font-medium"
-                    : "text-white/90 hover:text-gray-900 hover:bg-gradient-to-r from-white to-transparent"
+                    : "text-white/90 hover:text-white hover:bg-gradient-to-r from-white/30 to-transparent"
                 }`}
               >
                 {item.icon}
