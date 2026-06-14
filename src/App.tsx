@@ -13,7 +13,7 @@ import { Footer } from "./components/Footer.js";
 
 import { HomePage } from "./components/HomePage.js";
 import { ArticlesDetailPage } from "./components/ArticlesDetailPage.js";
-import { AdminAnalytics } from "./components/AdminAnalytics.js";
+// import { AdminAnalytics } from "./components/AdminAnalytics.js";
 import { ContactForm } from "./components/ContactForm.js";
 import { AdminContacts } from "./components/AdminContacts.js";
 
@@ -73,8 +73,8 @@ function AppContent() {
         <Route path="/:lang(en|uk)/admin/contacts" element={<AdminContacts />} />
         
         {/* Адмінка — аналітика */}
-        <Route path="/admin/analytics" element={<AdminAnalytics />} />
-        <Route path="/:lang(en|uk)/admin/analytics" element={<AdminAnalytics />} />
+        {/* <Route path="/admin/analytics" element={<AdminAnalytics />} />
+        <Route path="/:lang(en|uk)/admin/analytics" element={<AdminAnalytics />} /> */}
       </Routes>
 
       <Footer />
