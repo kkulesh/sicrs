@@ -18,9 +18,9 @@ export function NewsSection() {
           <h2 className="text-3xl font-medium text-gray-900 mb-4">
             {t("news.title")}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t("news.subtitle")}
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
@@ -129,11 +129,11 @@ export function NewsSection() {
                         <h3 className="text-base font-medium leading-tight mb-2 group-hover:text-blue-200 transition-colors line-clamp-2">
                           {news.title}
                         </h3>
-                        <p className="text-white/90 text-xs mb-2">
+                        {/* <p className="text-white/90 text-xs mb-2">
                           {news.authors}
-                        </p>
+                        </p> */}
                         <p className="text-white/80 text-xs mb-3">
-                          {news.date}
+                          {news.dateFull}
                         </p>
                         <div className="flex flex-wrap gap-1">
                           {news.tags?.slice(0, 2).map((tag, tagIndex) => (

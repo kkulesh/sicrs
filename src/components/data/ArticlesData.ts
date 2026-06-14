@@ -246,12 +246,10 @@ SICRS розвиває міжнародну співпрацю з академі
       authors: isUk
         ? "Ольга Іляш"
         : "Olga Ilyash",
-      date: isUk
+      dateFull: isUk
         ? "18 липня 2025"
         : "18 July 2025",
-      tags: isUk 
-        ? []
-        : [],
+      tags: isUk ? [] : [],
       image: "/images/Articles/zoom_grant.jpg",
       size: "small",
       content: isUk
@@ -269,7 +267,7 @@ SICRS розвиває міжнародну співпрацю з академі
       authors: isUk
         ? "Ольга Іляш"
         : "Olga Ilyash",
-      date: isUk
+      dateFull: isUk
         ? "25 липня 2025"
         : "25 July 2025",
       tags: isUk
@@ -287,7 +285,7 @@ SICRS розвиває міжнародну співпрацю з академі
       authors: isUk 
         ? "Оксана Марченко та Андрій Шевченко"
         : "Oksana Marchenko and Andriy Shevchenko",
-      date: isUk
+      dateFull: isUk
         ? "02 серпня 2025"
         : "02 August 2025",
       tags: isUk

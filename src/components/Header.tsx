@@ -306,12 +306,12 @@ export function Header() {
                 ? t(`header.bottomText1.${currentPage}`)
                 : pageData.bottomText1;
 
-              const bottomText2 = t(`header.bottomText2.${currentPage}`) !== `header.bottomText2.${currentPage}`
-                ? t(`header.bottomText2.${currentPage}`)
-                : pageData.bottomText2;
+              // const bottomText2 = t(`header.bottomText2.${currentPage}`) !== `header.bottomText2.${currentPage}`
+              //   ? t(`header.bottomText2.${currentPage}`)
+              //   : pageData.bottomText2;
 
-              // Якщо немає жодного тексту, нічого не рендеримо
-              if (!bottomText1 && !bottomText2) return null;
+              // // Якщо немає жодного тексту, нічого не рендеримо
+              // if (!bottomText1 && !bottomText2) return null;
 
               return (
                 <div className="absolute bottom-12 text-left space-y-4">
@@ -320,11 +320,11 @@ export function Header() {
                       {bottomText1}
                     </p> // 4.75xl
                   )}
-                  {bottomText2 && (
+                  {/* {bottomText2 && (
                     <p className="text-white text-xl font-medium max-w-lg leading-relaxed whitespace-pre-line">
                       {bottomText2}
                     </p>
-                  )}
+                  )} */}
                 </div>
               );
             })()}
