@@ -78,32 +78,40 @@ export function SideMenu({ onNavigate, onCloseMenu }: SideMenuProps) {
       {sections.map((section, secIdx) => (
         <div key={secIdx} className="space-y-2">
           {section.map((item, idx) => {
-  const hashLinkActive =
-    item.to.startsWith("/#") &&
-    location.pathname === "/" &&
-    location.hash === item.to.slice(1);
+          const hashLinkActive =
+            item.to.startsWith("/#") &&
+            location.pathname === "/" &&
+            location.hash === item.to.slice(1);
 
-  const isActive =
-    item.to === "/"
-      ? location.pathname === "/" && !location.hash
-      : location.pathname === item.to || hashLinkActive;
+          const isActive =
+            item.to === "/"
+              ? location.pathname === "/" && !location.hash
+              : location.pathname === item.to || hashLinkActive;
 
             return (
               <Link
                 key={idx}
                 to={item.to}
                 onClick={() => handleNavigation(item.page)}
-                className={`w-full flex items-center justify-start text-left text-[15px] h-11 px-4 rounded-full ${
-  isActive
-    ? "bg-white text-gray-900 font-medium"
-    : "text-white/90 hover:text-white hover:bg-gradient-to-r from-white/30 to-transparent"
-}`}
+                className={`w-full flex items-center justify-start text-left text-[15px] h-11 px-4 rounded-full 
+                ${
+                  isActive
+                    ? ""
+                    : "text-white/90 hover:text-white hover:bg-gradient-to-r from-white/30 to-transparent"
+                }
+              `}
               >
                 {item.icon}
                 {item.label}
               </Link>
             );
           })}
+
+          {/* ${
+            isActive
+              ? "bg-white text-gray-900 font-medium"
+              : "text-white/90 hover:text-white hover:bg-gradient-to-r from-white/30 to-transparent"
+          } */}
 
           {/* Divider після секції, крім останньої */}
           {secIdx < sections.length - 1 && (
