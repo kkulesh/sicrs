@@ -16,7 +16,7 @@ export function PartnershipsSection() {
     {
       name: "Partner 1",
       logo: "images/Partners/shidnytsya.png",
-      url: "https://skhidnytsia-rada.gov.ua/?fbclid=IwY2xjawSSl3pleHRuA2FlbQIxMABicmlkETEydVBzSWVXSkVkakJoZ01Uc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHm77S7wdKJzAY_YLyf3UpwDKsNs7yt3p9phZ-4_74VuEa7UnMfzLNUBtGKJR_aem_4WF7LSN6vQlM0KUFNEXJoA"
+      url: "https://skhidnytsia-rada.gov.ua/"
     },
     {
       name: "Partner 2",
