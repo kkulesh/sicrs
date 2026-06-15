@@ -1,8 +1,8 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState, useEffect } from "react";
 import { useLanguage } from "../../contexts/LanguageContext.js";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 export function PartnershipsSection() {
   const { t } = useLanguage();
@@ -54,15 +54,59 @@ export function PartnershipsSection() {
     [autoplay.current]
   );
 
+  const [isPlaying, setIsPlaying] = useState(true);
+  const isUserPaused = useRef(false);
+
+  const toggleAutoplay = useCallback(() => {
+    const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+    if (!autoplayPlugin) return;
+
+    if (isPlaying) {
+      autoplayPlugin.stop();
+      setIsPlaying(false);
+      isUserPaused.current = true;
+    } else {
+      autoplayPlugin.play();
+      setIsPlaying(true);
+      isUserPaused.current = false;
+    }
+  }, [emblaApi, isPlaying]);
+
+  useEffect(() => {
+    const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+    if (!autoplayPlugin) return;
+
+    emblaApi.on('autoplay:play', () => setIsPlaying(true));
+    emblaApi.on('autoplay:stop', () => setIsPlaying(false));
+  }, [emblaApi]);
+
+  const handleMouseEnter = useCallback(() => {
+    const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+    if (autoplayPlugin && !isUserPaused.current) {
+      autoplayPlugin.stop();
+    }
+  }, [emblaApi]);
+
+  const handleMouseLeave = useCallback(() => {
+    const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+    if (autoplayPlugin && !isUserPaused.current) {
+      autoplayPlugin.play();
+    }
+  }, [emblaApi]);
+
   const resumeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const resetAutoplay = useCallback(() => {
     if (resumeTimeout.current) clearTimeout(resumeTimeout.current);
     resumeTimeout.current = setTimeout(() => {
-      autoplay.current.reset();
-      autoplay.current.play();
+      const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+      if (autoplayPlugin) {
+        autoplayPlugin.reset();
+        autoplayPlugin.play();
+        setIsPlaying(true);
+      }
     }, 5000);
-  }, []);
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     emblaApi?.scrollTo(emblaApi.selectedScrollSnap() - 3);
@@ -94,7 +138,12 @@ export function PartnershipsSection() {
           </button>
 
           {/* Карусель */}
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div 
+            className="overflow-hidden" 
+            ref={emblaRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <div className="flex items-center">
               {partners.map((partner, index) => (
                 <div key={index} className="flex-none px-4">
@@ -125,6 +174,21 @@ export function PartnershipsSection() {
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6 text-gray-700" />
+          </button>
+        </div>
+
+        {/* Кнопка Pause / Play */}
+        <div className="mt-8 flex justify-center">
+          <button
+            onClick={toggleAutoplay}
+            className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
+            aria-label={isPlaying ? "Pause" : "Play"}
+          >
+            {isPlaying ? (
+              <Pause className="w-5 h-5" />
+            ) : (
+              <Play className="w-5 h-5 ml-0.5" />
+            )}
           </button>
         </div>
       </div>
