@@ -24,11 +24,6 @@ export function PartnershipsSection() {
       url: "https://welcome.imtlucca.it/"
     },
     {
-      name: "Partner 3",
-      logo: "images/Partners/sobigdata.png",
-      url: "https://www.sobigdata.eu/"
-    },
-    {
       name: "Partner 4",
       logo: "images/Partners/ндц_іпр_нану.png",
       url: "https://ndc-ipr.org/"
