@@ -61,82 +61,43 @@ export function NewsSection() {
           )}
           */}
 
-          {/* Smaller news */}
+          {/* Smaller news / all news */}
           <div className="lg:col-span-3 flex justify-center">
-            <div className="w-full max-w-[1030px] grid grid-rows-2 gap-6">
+            <div className="w-full max-w-[1030px] flex flex-col gap-6">
 
-          {/* <div className="lg:col-span-2 grid grid-rows-2 gap-6 items-center"> 
-                {[news.slice(1, 3), news.slice(3, 5)].map( */}
+            {/* Chunk the news array into pairs (2 per row) */}
+            {Array.from({ length: Math.ceil(news.length / 2) }).map((_, rowIndex) => {
+              const group = news.slice(rowIndex * 2, rowIndex * 2 + 2);
+              // If there's only 1 item in this row, center it
+              const isSingleItemInRow = group.length === 1;
 
-            {[news.slice(0, 2), news.slice(2, 4)].map(
-              (group, gIndex) => (
+              return (
                 <div
-                  key={gIndex}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                  key={rowIndex}
+                  className={`grid grid-cols-1 gap-6 ${isSingleItemInRow ? 'md:grid-cols-1 w-full md:w-[calc(50%-0.75rem)] mx-auto' : 'md:grid-cols-2'}`}
                 >
-                  {group.map((news) => (
+                  {group.map((item) => (
                     <Link
-                      key={news.id}
-                      to={localizePath(language, `/news/${news.slug}`)}
-                      className="relative h-[285px] rounded-lg overflow-hidden shadow-primary/20 shadow-lg hover:shadow-primary/40 hover:shadow-xl transition-all duration-300 group"
+                      key={item.id}
+                      to={localizePath(language, `/news/${item.slug}`)}
+                      className="relative h-[220px] sm:h-[260px] md:h-[285px] rounded-lg overflow-hidden shadow-primary/20 shadow-lg hover:shadow-primary/40 hover:shadow-xl transition-all duration-300 group"
                     >
                       <ImageWithFallback
-                        src={news.image}
-                        alt={news.title}
+                        src={item.image}
+                        alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                      {/* <div className="absolute top-4 left-4">
-                        <Badge
-                          className={`text-white text-xs font-medium ${
-                            news?.category?.toLowerCase().includes(
-                              "policy"
-                            ) ||
-                            news?.category
-                              ?.toLowerCase()
-                              .includes("політична")
-                              ? "bg-red-600 hover:bg-red-700"
-                              : news?.category
-                                  ?.toLowerCase()
-                                  .includes("working") ||
-                                news?.category
-                                  ?.toLowerCase()
-                                  .includes("робоча")
-                              ? "bg-purple-600 hover:bg-purple-700"
-                              : news?.category
-                                  ?.toLowerCase()
-                                  .includes("analysis") ||
-                                news?.category
-                                  ?.toLowerCase()
-                                  .includes("аналіз")
-                              ? "bg-green-600 hover:bg-green-700"
-                              : news?.category
-                                  ?.toLowerCase()
-                                  .includes("report") ||
-                                news?.category
-                                  ?.toLowerCase()
-                                  .includes("звіт")
-                              ? "bg-orange-600 hover:bg-orange-700"
-                              : "bg-blue-600 hover:bg-blue-700"
-                          }`}
-                        >
-                          {news.category}
-                        </Badge>
-                      </div> */}
-
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                         <h3 className="text-base font-medium leading-tight mb-2 group-hover:text-blue-200 transition-colors line-clamp-2">
-                          {news.title}
+                          {item.title}
                         </h3>
-                        {/* <p className="text-white/90 text-xs mb-2">
-                          {news.authors}
-                        </p> */}
                         <p className="text-white/80 text-xs mb-3">
-                          {news.dateFull}
+                          {item.dateFull}
                         </p>
                         <div className="flex flex-wrap gap-1">
-                          {news.tags?.slice(0, 3).map((tag, tagIndex) => (
+                          {item.tags?.slice(0, 3).map((tag, tagIndex) => (
                             <Badge
                               key={tagIndex}
                               variant="outline"
@@ -145,7 +106,7 @@ export function NewsSection() {
                               {tag}
                             </Badge>
                           ))}
-                          {news.tags && news.tags.length > 3 && (
+                          {item.tags && item.tags.length > 3 && (
                             <Badge
                               variant="outline"
                               className="border-white/40 text-white/90 hover:bg-white/10 text-xs"
@@ -158,8 +119,8 @@ export function NewsSection() {
                     </Link>
                   ))}
                 </div>
-              )
-            )}
+              );
+            })}
           </div>
         </div>
       </div>

@@ -118,6 +118,50 @@ export const Articles = (isUk: boolean) => [
     // },
       {
       id: "article-1",
+      slug: "policy-brief-shidnytsya",
+      title: isUk
+        ? "Опубліковано перший Policy Brief для Східницької територіальної громади"
+        : "The first Policy Brief for the Shidnytsya territorial community has been published",
+      authors: isUk ? "Команда SICRS" : "SICRS Team",
+      dateFull: isUk ? "19 червня 2026" : "June 19, 2026",
+      dateTime: "19.06.2026",
+      readTime: "5",
+      tags: isUk ? ["Новини", "Policy Brief"] : ["News", "Policy Brief"],
+      image: "/images/Articles/policy.jpg",
+      size: "large",
+      description: isUk
+        ? "Міжнародне наукове товариство SICRS презентувало перший Policy Brief: «Від ресурсу до резильєнтності: пріоритети розвитку Східницької територіальної громади»."
+        : "The international scientific society SICRS presented the first Policy Brief: 'From Resource to Resilience: Development Priorities of the Shidnytsya Territorial Community'.",
+      content: isUk
+        ? `Міжнародне наукове товариство Society for Industrial Recovery & Community Resilience Studies (SICRS) презентувало перший Policy Brief «Від ресурсу до резильєнтності: пріоритети розвитку Східницької територіальної громади». Документ підготовлено командою SICRS за результатами міжнародного воркшопу «Стійкість громад: від даних та аналітики до практичних рішень», який відбувся 12–13 червня 2026 року у Східницькій громаді.
+
+Policy Brief став першим аналітичним продуктом, підготовленим у межах діяльності мережі Industrial Recovery & Community Capacity Network (IRCCN). Документ узагальнює результати експертних дискусій, консультацій та аналітичних досліджень, проведених за участю представників органів влади, місцевого самоврядування, міжнародних організацій, наукової спільноти, бізнесу та громадського сектору.
+
+У центрі дослідження - питання того, як Східницькій громаді перетворити свої унікальні природні, економічні та людські ресурси на довгострокові фактори стійкості та розвитку. Документ побудовано навколо п'яти взаємопов'язаних контурів резильєнтності: соціального, економічного, інфраструктурного, медико-реабілітаційного та фінансового. Для кожного напряму проведено діагностику викликів, визначено стратегічні питання розвитку та сформульовано рекомендації для громади, державних інституцій і міжнародних партнерів.
+
+Важливим результатом воркшопу стало формування перших контурів майбутньої моделі розвитку Східницької громади, заснованої на поєднанні доказової аналітики, місцевого досвіду та міжнародної експертизи. Policy Brief визначає пріоритети подальшої роботи у сферах людського капіталу, економічної диверсифікації, модернізації інфраструктури, розвитку медико-реабілітаційного потенціалу та посилення фінансової спроможності громади.
+
+Публікація цього документа є першим кроком до створення серії Policy Briefs для українських територіальних громад у межах діяльності SICRS та мережі IRCCN. Метою цієї роботи є перетворення наукових досліджень і даних на практичні рішення для громад, державних інституцій та міжнародних партнерів.
+
+---
+
+### [📥 Завантажити Policy Brief (PDF)](/documents/+Полісі%20бріф_ФІН.pdf)`
+        : `The international scientific society Society for Industrial Recovery & Community Resilience Studies (SICRS) presented the first Policy Brief "From Resource to Resilience: Development Priorities of the Shidnytsya Territorial Community". The document was prepared by the SICRS team following the international workshop "Community Resilience: From Data and Analytics to Practical Solutions", held on June 12–13, 2026, in the Shidnytsya community.
+
+The Policy Brief is the first analytical product prepared within the Industrial Recovery & Community Capacity Network (IRCCN). The document summarizes the results of expert discussions, consultations, and analytical research involving representatives of government authorities, local self-government, international organizations, the scientific community, business, and the public sector.
+
+At the core of the research is how the Shidnytsya community can transform its unique natural, economic, and human resources into long-term factors of resilience and development. The document is structured around five interconnected contours of resilience: social, economic, infrastructural, medical-rehabilitation, and financial. For each area, diagnostics of challenges were conducted, strategic development issues were identified, and recommendations were formulated for the community, state institutions, and international partners.
+
+An important outcome of the workshop was compiling the initial contours of the future development model for the Shidnytsya community, based on combining evidence-based analytics, local experience, and international expertise. The Policy Brief defines priorities for further work in human capital, economic diversification, infrastructure modernization, development of medical-rehabilitation potential, and strengthening the financial capacity of the community.
+
+The publication of this document marks the first step toward creating a series of Policy Briefs for Ukrainian territorial communities within the activities of SICRS and the IRCCN network. The goal of this work is to transform scientific research and data into practical solutions for communities, state institutions, and international partners.
+
+---
+
+### [📥 Download Policy Brief (PDF)](/documents/+Полісі%20бріф_ФІН.pdf)`
+      },
+      {
+      id: "article-2",
       slug: "sicrs-irccn-launched-shidnytsya",
       title: isUk
         ? "У Східниці офіційно відбувся запуск SICRS та мережі IRCCN"
@@ -154,7 +198,7 @@ The event marked an important step in the development of international cooperati
 `
     },
     {
-      id: "article-2",
+      id: "article-3",
       slug: "shidnytsya-workshop-announcement",
       title: isUk
         ? "У Східницькій громаді відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень»"
@@ -187,7 +231,7 @@ As part of the event, the official launch of the international scientific societ
 `
     },
     {
-      id: "article-3",
+      id: "article-4",
       slug: "sicrs-grant-science-at-risk",
       title: isUk
         ? "Проєкт SICRS та IRCCN отримав грантову підтримку міжнародного акселератора Science at Risk"
@@ -221,7 +265,7 @@ The support received has enabled the practical implementation of the initiative 
 `
     },
     {
-      id: "article-4",
+      id: "article-5",
       slug: "created-sicrs",
       title: isUk
         ? "Створено міжнародне наукове товариство SICRS"
