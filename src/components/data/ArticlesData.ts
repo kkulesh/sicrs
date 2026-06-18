@@ -120,7 +120,7 @@ export const Articles = (isUk: boolean) => [
       id: "article-1",
       slug: "sicrs-irccn-launched-shidnytsya",
       title: isUk
-        ? "У Східниці офіційно відбувався запуск SICRS та мережі IRCCN"
+        ? "У Східниці офіційно відбувся запуск SICRS та мережі IRCCN"
         : "The official launch of SICRS and the IRCCN network took place in Shidnytsya",
       authors: isUk ? "Команда SICRS" : "SICRS Team",
       dateFull: isUk ? "15 червня 2026" : "June 15, 2026",
@@ -163,7 +163,7 @@ The event marked an important step in strengthening international cooperation an
       dateFull: isUk ? "10 червня 2026" : "June 10, 2026",
       dateTime: "10.06.2026",
       readTime: "4",
-      tags: isUk ? ["Події", "Воркшоп"] : ["Events", "Workshop"],
+      tags: isUk ? ["Події", "Воркшоп", "IRCCN"] : ["Events", "Workshop", "IRCCN"],
       image: "/images/Articles/workshop.jpg",
       size: "small",
       description: isUk
