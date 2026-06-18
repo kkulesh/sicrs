@@ -4,41 +4,41 @@ export const expertsData = (isUk: boolean) => [
   {
     id: "ilyash",
     name: isUk ? "Ольга ІЛЯШ" : "Olga ILYASH",
-    position: isUk ? "Доктор економічних наук, професор, керівник напряму стратегічного моніторингу соціально-економічного розвитку регіонів" 
+    position: isUk ? "Доктор економічних наук, професор. Засновниця та керівниця Society for Industrial Recovery & Community Resilience Studies (SICRS) та керівниця ГО «Академічний простір». Експертка з питань соціально-економічного розвитку, регіональної промислової політики, відновлення територій та спроможності громад" 
                       :
-                     "Doctor of Economics, Professor, Head of the Strategic Monitoring of Socio-Economic Development of Regions",
+                     "Doctor of Economic Sciences, Professor. Founder and Head of the Society for Industrial Recovery & Community Resilience Studies (SICRS) and Head of the NGO “Academic Space.” Expert in socio-economic development, regional industrial policy, territorial recovery, and community resilience",
     image: "/images/ExpertPhotos/ilyash.jpg"
   },
   {
     id: "kyzym",
     name: isUk ? "Микола КИЗИМ" : "Mykola KYZYM",
-    position: isUk ? "Член-кореспондент Національної академії наук України, доктор економічних наук, професор, заслужений економіст України. Керівник напряму науково-технічної діяльності" 
+    position: isUk ? "Член-кореспондент НАН України, доктор економічних наук, професор, заслужений економіст України. Учасник Society for Industrial Recovery & Community Resilience Studies (SICRS). Експерт з питань стратегічного розвитку, формування індустріальних систем та науково-технологічної політики" 
                       :
-                     "Corresponding Member of the National Academy of Sciences of Ukraine, Doctor of Economic Sciences, Professor, Honored Economist of Ukraine. Head of the Scientific and Technical Activity Direction",
+                     "Corresponding Member of the National Academy of Sciences of Ukraine, Doctor of Economic Sciences, Professor, Honored Economist of Ukraine. Member of the Society for Industrial Recovery & Community Resilience Studies (SICRS). Expert in strategic development, industrial systems formation, and science and technology policy",
     image: "/images/ExpertPhotos/kyzym.png"
   },
   {
     id: "khaustova",
     name: isUk ? "Вікторія ХАУСТОВА" : "Viktoriia KHAUSTOVA",
-    position: isUk ? "Доктор економічних наук, професор. Керівник напряму промислової політики та інноваційного розвитку" 
+    position: isUk ? "Доктор економічних наук, професор, директор Науково-дослідного центру індустріальних проблем розвитку НАН України. Співзасновниця Society for Industrial Recovery & Community Resilience Studies (SICRS). Експертка з питань промислової політики, інноваційного розвитку та сруктурної трансформації економіки" 
                       :
-                     "Doctor of Economic Sciences, Professor. Head of the Industrial Policy and Innovation Development Department",
+                     "Doctor of Economic Sciences, Professor, Director of the Research Centre for Industrial Problems of Development of the National Academy of Sciences of Ukraine. Co-founder of the Society for Industrial Recovery & Community Resilience Studies (SICRS). Expert in industrial policy, innovation-driven development, and structural transformation of the economy",
     image: "/images/ExpertPhotos/khaustova.jpg"
   },
   {
     id: "trushkina",
     name: isUk ? "Наталія ТРУШКІНА" : "Nataliia TRUSHKINA",
-    position: isUk ? "Кандидат економічних наук, старший дослідник. Старший науковий співробітник сектора промислової політики та інноваційного розвитку відділу промислової політики та енергетичної безпеки." 
+    position: isUk ? "Кандидат економічних наук, старший дослідник. Учасниця Society for Industrial Recovery & Community Resilience Studies (SICRS). Експертка з питань промислової політики, регіонального розвитку, логістики та відновлення економічних систем" 
                       : 
-                    "Candidate of Economic Sciences, Senior Researcher. Senior Researcher in the Industrial Policy and Innovation Development Sector of the Industrial Policy and Energy Security Department.",
+                    "Candidate of Economic Sciences (PhD in Economics), Senior Researcher. Member of the Society for Industrial Recovery & Community Resilience Studies (SICRS). Expert in industrial policy, regional development, logistics, and the recovery of economic systems",
     image: "/images/ExpertPhotos/trushkina.jpg"
   },
   {
     id: "salashenko",
     name: isUk ? "Тетяна САЛАШЕНКО" : "Tetiana SALASHENKO",
-    position: isUk ? "Кандидат економічних наук. Керівник напряму з питань енергетики. Експерт з енергетичної політики та енергетичних ринків, енергетичної безпеки та енергозбереження." 
+    position: isUk ? "Доктор економічних наук, старший дослідник. Учасниця Society for Industrial Recovery & Community Resilience Studies (SICRS). Експертка з питань енергетичної політики, енергетичних ринків, енергетичної безпеки та  трансформації критичної інфраструктури громад" 
                       : 
-                    "Candidate of Economic Sciences. Head of the Energy Department. Expert in energy policy and energy markets, energy security and energy conservation.",
+                    "Doctor of Economic Sciences, Senior Researcher. Member of the Society for Industrial Recovery & Community Resilience Studies (SICRS). Expert in energy policy, energy markets, energy security, and the transformation of critical community infrastructure",
     image: "/images/ExpertPhotos/salashenko.jpg"
   }
 ];

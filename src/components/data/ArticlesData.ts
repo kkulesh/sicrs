@@ -190,7 +190,7 @@ The support received has enabled the practical implementation of the initiative 
       slug: "shidnytsia-workshop-announcement",
       title: isUk
         ? "У Східницькій громаді відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень»"
-        : "International workshop in Shidnytsia community",
+        : "International Workshop “Community Resilience: From Data and Analytics to Practical Solutions” to Be Held in Skhidnytsia Community",
       authors: isUk ? "Команда SICRS" : "SICRS Team",
       dateFull: isUk ? "10 червня 2026" : "June 10, 2026",
       dateTime: "10.06.2026",
@@ -209,7 +209,14 @@ The support received has enabled the practical implementation of the initiative 
 Воркшоп об'єднає представників органів місцевого самоврядування, державної влади, міжнародних організацій, науковців, бізнесу та громадянського суспільства для обговорення сучасних підходів до розвитку громад, відновлення економіки, енергетичної стійкості та міжнародної співпраці.
 
 У межах заходу відбудеться офіційний запуск міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN), а також презентація перших напрацювань щодо підтримки громад України.`
-        : `On June 12-13, 2026, the international workshop "Community Resilience: From Data and Analytics to Practical Solutions" will be held.`
+        : `On June 12–13, 2026, the Skhidnytsia Territorial Community of Lviv Region, Ukraine, will host the international workshop “Community Resilience: From Data and Analytics to Practical Solutions”.
+
+The event is organized within the framework of the Industrial Recovery & Community Capacity Network (IRCCN) project and the activities of the international scientific society SICRS.
+
+The workshop will bring together representatives of local self-government bodies, public authorities, international organizations, academia, business, and civil society to discuss modern approaches to community development, economic recovery, energy resilience, and international cooperation.
+
+As part of the event, the official launch of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN) will take place. The first outcomes and initiatives aimed at supporting Ukrainian communities will also be presented.
+`
     },
     {
       id: "article-4",
@@ -237,7 +244,16 @@ The support received has enabled the practical implementation of the initiative 
 За результатами воркшопу розпочато формування міжнародної експертної мережі, визначено пріоритетні напрями співпраці та започатковано підготовку першого Policy Brief для Східницької територіальної громади.
 
 Проведений захід став важливим кроком у розвитку міжнародної співпраці та створенні нових механізмів підтримки відновлення громад і територій України.`
-        : `On June 12-13, 2026, the international workshop in Shidnytsia community served as the official launch of SICRS and IRCCN.`
+        : `On June 12–13, 2026, the international workshop “Community Resilience: From Data and Analytics to Practical Solutions” was held in the Skhidnytsia Territorial Community. The event became the first public activity of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN).
+
+The workshop brought together representatives of local self-government bodies, international organizations, research institutions, businesses, and civil society organizations from Ukraine and other countries.
+
+A key milestone of the workshop was the official launch of SICRS and IRCCN as international platforms for fostering scientific cooperation, developing Policy Briefs, and supporting evidence-based decision-making.
+
+As a result of the workshop, the process of establishing an international expert network was initiated, priority areas for cooperation were identified, and the preparation of the first Policy Brief for the Skhidnytsia Territorial Community was launched.
+
+The event marked an important step in strengthening international cooperation and creating new mechanisms to support the recovery and sustainable development of Ukrainian communities and territories.
+`
     }
   ];
 
