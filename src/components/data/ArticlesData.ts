@@ -116,43 +116,78 @@ export const Articles = (isUk: boolean) => [
     // Registration for the event is now open on the Center's official website. Space is limited, so we recommend registering as soon as possible.
     // `
     // },
-    {
+      {
       id: "article-1",
-      slug: "created-sicrs",
+      slug: "sicrs-irccn-launched-shidnytsya",
       title: isUk
-        ? "Створено міжнародне наукове товариство SICRS"
-        : "Society for Industrial Recovery & Community Resilience Studies (SICRS) created",
+        ? "У Східниці офіційно відбувався запуск SICRS та мережі IRCCN"
+        : "The official launch of SICRS and the IRCCN network took place in Skhidnytsia",
       authors: isUk ? "Команда SICRS" : "SICRS Team",
-      dateFull: isUk ? "1 червня 2026" : "June 1, 2026",
-      dateTime: "01.06.2026",
-      readTime: "3",
-      tags: isUk ? ["Новини", "SICRS"] : ["News", "SICRS"],
-      image: "/images/Articles/imt_lucca_prof.jpg",
-      size: "large",
+      dateFull: isUk ? "15 червня 2026" : "June 15, 2026",
+      dateTime: "15.06.2026",
+      readTime: "4",
+      tags: isUk ? ["Події", "IRCCN"] : ["Events", "IRCCN"],
+      image: "/images/Articles/report.jpg",
+      size: "small",
       description: isUk
-        ? "Оголошено про створення Society for Industrial Recovery & Community Resilience Studies (SICRS) - міжнародного наукового товариства."
-        : "Society for Industrial Recovery & Community Resilience Studies (SICRS) created as an international scientific platform.",
-
+        ? "Міжнародний воркшоп у Східниці став першою публічною подією SICRS та IRCCN."
+        : "The international workshop in Shidnytsya became the first public event of SICRS and IRCCN.",
       content: isUk
-        ? `Оголошено про створення Society for Industrial Recovery & Community Resilience Studies (SICRS) - міжнародного наукового товариства, покликаного об'єднати дослідників, експертів, представників громад, органів влади, бізнесу та міжнародних партнерів навколо питань відновлення промисловості, розвитку територій та підвищення стійкості громад.
+        ? `12–13 червня 2026 року у Східницькій громаді відбувся міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень», який став першою публічною подією міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN).
 
-SICRS створено як відкриту міжнародну платформу для проведення досліджень, підготовки аналітичних матеріалів, Policy Briefs та розвитку співпраці між науковою спільнотою й практиками, які працюють над відновленням України.
+У заході взяли участь представники органів місцевого самоврядування, міжнародних організацій, наукових установ, бізнесу та громадського сектору з України та інших країн.
 
-Діяльність товариства зосереджена на підтримці прийняття рішень на основі даних, поширенні міжнародного досвіду та розробленні практичних рекомендацій для територіальних громад і державних інституцій.
+Ключовою подією воркшопу став офіційний запуск SICRS та IRCCN як міжнародних платформ для розвитку наукової співпраці, підготовки Policy Briefs та підтримки прийняття рішень на основі даних.
 
-Одним із ключових напрямів роботи SICRS стане розвиток міжнародної експертної мережі та створення майданчика для обміну знаннями між українськими та іноземними партнерами.
-`
-        : `The establishment of the Society for Industrial Recovery & Community Resilience Studies (SICRS) — an international academic society designed to bring together researchers, experts, community representatives, government officials, business leaders, and international partners to address issues related to industrial recovery, regional development, and enhancing community resilience—has been announced.
+За результатами воркшопу розпочато формування міжнародної експертної мережі, визначено пріоритетні напрями співпраці та започатковано підготовку першого Policy Brief для Східницької територіальної громади.
 
-SICRS was established as an open international platform for conducting research, preparing analytical materials and policy briefs, and fostering collaboration between the academic community and practitioners working on Ukraine’s recovery.
+Проведений захід став важливим кроком у розвитку міжнародної співпраці та створенні нових механізмів підтримки відновлення громад і територій України.`
+        : `On June 12–13, 2026, the international workshop “Community Resilience: From Data and Analytics to Practical Solutions” was held in the Skhidnytsia Territorial Community. The event became the first public activity of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN).
 
-The society’s activities focus on supporting data-driven decision-making, sharing international best practices, and developing practical recommendations for local communities and government institutions.
+The workshop brought together representatives of local self-government bodies, international organizations, research institutions, businesses, and civil society organizations from Ukraine and other countries.
 
-One of SICRS’s key areas of work will be the development of an international network of experts and the creation of a platform for knowledge exchange between Ukrainian and foreign partners.
+A key milestone of the workshop was the official launch of SICRS and IRCCN as international platforms for fostering scientific cooperation, developing Policy Briefs, and supporting evidence-based decision-making.
+
+As a result of the workshop, the process of establishing an international expert network was initiated, priority areas for cooperation were identified, and the preparation of the first Policy Brief for the Skhidnytsia Territorial Community was launched.
+
+The event marked an important step in strengthening international cooperation and creating new mechanisms to support the recovery and sustainable development of Ukrainian communities and territories.
 `
     },
     {
       id: "article-2",
+      slug: "shidnytsya-workshop-announcement",
+      title: isUk
+        ? "У Східницькій громаді відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень»"
+        : "International Workshop “Community Resilience: From Data and Analytics to Practical Solutions” to Be Held in Skhidnytsia Community",
+      authors: isUk ? "Команда SICRS" : "SICRS Team",
+      dateFull: isUk ? "10 червня 2026" : "June 10, 2026",
+      dateTime: "10.06.2026",
+      readTime: "4",
+      tags: isUk ? ["Події", "Воркшоп"] : ["Events", "Workshop"],
+      image: "/images/Articles/workshop.jpg",
+      size: "small",
+      description: isUk
+        ? "12-13 червня 2026 року у Східниці відбудеться міжнародний воркшоп."
+        : "An international workshop will be held in Shidnytsya on June 12-13, 2026.",
+      content: isUk
+        ? `12–13 червня 2026 року у Східницькій селищній територіальній громаді Львівської області відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень».
+
+Захід проводиться в межах реалізації проєкту Industrial Recovery & Community Capacity Network (IRCCN) та діяльності міжнародного наукового товариства SICRS.
+
+Воркшоп об'єднає представників органів місцевого самоврядування, державної влади, міжнародних організацій, науковців, бізнесу та громадянського суспільства для обговорення сучасних підходів до розвитку громад, відновлення економіки, енергетичної стійкості та міжнародної співпраці.
+
+У межах заходу відбудеться офіційний запуск міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN), а також презентація перших напрацювань щодо підтримки громад України.`
+        : `On June 12–13, 2026, the Skhidnytsia Territorial Community of Lviv Region, Ukraine, will host the international workshop “Community Resilience: From Data and Analytics to Practical Solutions”.
+
+The event is organized within the framework of the Industrial Recovery & Community Capacity Network (IRCCN) project and the activities of the international scientific society SICRS.
+
+The workshop will bring together representatives of local self-government bodies, public authorities, international organizations, academia, business, and civil society to discuss modern approaches to community development, economic recovery, energy resilience, and international cooperation.
+
+As part of the event, the official launch of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN) will take place. The first outcomes and initiatives aimed at supporting Ukrainian communities will also be presented.
+`
+    },
+    {
+      id: "article-3",
       slug: "sicrs-grant-science-at-risk",
       title: isUk
         ? "Проєкт SICRS та IRCCN отримав грантову підтримку міжнародного акселератора Science at Risk"
@@ -186,75 +221,40 @@ The support received has enabled the practical implementation of the initiative 
 `
     },
     {
-      id: "article-3",
-      slug: "shidnytsia-workshop-announcement",
+      id: "article-4",
+      slug: "created-sicrs",
       title: isUk
-        ? "У Східницькій громаді відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень»"
-        : "International Workshop “Community Resilience: From Data and Analytics to Practical Solutions” to Be Held in Skhidnytsia Community",
+        ? "Створено міжнародне наукове товариство SICRS"
+        : "Society for Industrial Recovery & Community Resilience Studies (SICRS) created",
       authors: isUk ? "Команда SICRS" : "SICRS Team",
-      dateFull: isUk ? "10 червня 2026" : "June 10, 2026",
-      dateTime: "10.06.2026",
-      readTime: "4",
-      tags: isUk ? ["Події", "Воркшоп"] : ["Events", "Workshop"],
-      image: "/images/Articles/workshop.jpg",
-      size: "small",
+      dateFull: isUk ? "1 червня 2026" : "June 1, 2026",
+      dateTime: "01.06.2026",
+      readTime: "3",
+      tags: isUk ? ["Новини", "SICRS"] : ["News", "SICRS"],
+      image: "/images/Articles/imt_lucca_prof.jpg",
+      size: "large",
       description: isUk
-        ? "12-13 червня 2026 року у Східниці відбудеться міжнародний воркшоп."
-        : "An international workshop will be held in Shidnytsia on June 12-13, 2026.",
+        ? "Оголошено про створення Society for Industrial Recovery & Community Resilience Studies (SICRS) - міжнародного наукового товариства."
+        : "Society for Industrial Recovery & Community Resilience Studies (SICRS) created as an international scientific platform.",
+
       content: isUk
-        ? `12–13 червня 2026 року у Східницькій селищній територіальній громаді Львівської області відбудеться міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень».
+        ? `Оголошено про створення Society for Industrial Recovery & Community Resilience Studies (SICRS) - міжнародного наукового товариства, покликаного об'єднати дослідників, експертів, представників громад, органів влади, бізнесу та міжнародних партнерів навколо питань відновлення промисловості, розвитку територій та підвищення стійкості громад.
 
-Захід проводиться в межах реалізації проєкту Industrial Recovery & Community Capacity Network (IRCCN) та діяльності міжнародного наукового товариства SICRS.
+SICRS створено як відкриту міжнародну платформу для проведення досліджень, підготовки аналітичних матеріалів, Policy Briefs та розвитку співпраці між науковою спільнотою й практиками, які працюють над відновленням України.
 
-Воркшоп об'єднає представників органів місцевого самоврядування, державної влади, міжнародних організацій, науковців, бізнесу та громадянського суспільства для обговорення сучасних підходів до розвитку громад, відновлення економіки, енергетичної стійкості та міжнародної співпраці.
+Діяльність товариства зосереджена на підтримці прийняття рішень на основі даних, поширенні міжнародного досвіду та розробленні практичних рекомендацій для територіальних громад і державних інституцій.
 
-У межах заходу відбудеться офіційний запуск міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN), а також презентація перших напрацювань щодо підтримки громад України.`
-        : `On June 12–13, 2026, the Skhidnytsia Territorial Community of Lviv Region, Ukraine, will host the international workshop “Community Resilience: From Data and Analytics to Practical Solutions”.
+Одним із ключових напрямів роботи SICRS стане розвиток міжнародної експертної мережі та створення майданчика для обміну знаннями між українськими та іноземними партнерами.
+`
+        : `The establishment of the Society for Industrial Recovery & Community Resilience Studies (SICRS) — an international academic society designed to bring together researchers, experts, community representatives, government officials, business leaders, and international partners to address issues related to industrial recovery, regional development, and enhancing community resilience—has been announced.
 
-The event is organized within the framework of the Industrial Recovery & Community Capacity Network (IRCCN) project and the activities of the international scientific society SICRS.
+SICRS was established as an open international platform for conducting research, preparing analytical materials and policy briefs, and fostering collaboration between the academic community and practitioners working on Ukraine’s recovery.
 
-The workshop will bring together representatives of local self-government bodies, public authorities, international organizations, academia, business, and civil society to discuss modern approaches to community development, economic recovery, energy resilience, and international cooperation.
+The society’s activities focus on supporting data-driven decision-making, sharing international best practices, and developing practical recommendations for local communities and government institutions.
 
-As part of the event, the official launch of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN) will take place. The first outcomes and initiatives aimed at supporting Ukrainian communities will also be presented.
+One of SICRS’s key areas of work will be the development of an international network of experts and the creation of a platform for knowledge exchange between Ukrainian and foreign partners.
 `
     },
-    {
-      id: "article-4",
-      slug: "sicrs-irccn-launched-shidnytsia",
-      title: isUk
-        ? "У Східниці офіційно запущено SICRS та мережу IRCCN"
-        : "SICRS and IRCCN officially launched in Shidnytsia",
-      authors: isUk ? "Команда SICRS" : "SICRS Team",
-      dateFull: isUk ? "15 червня 2026" : "June 15, 2026",
-      dateTime: "15.06.2026",
-      readTime: "4",
-      tags: isUk ? ["Події", "IRCCN"] : ["Events", "IRCCN"],
-      image: "/images/Articles/report.jpg",
-      size: "small",
-      description: isUk
-        ? "Міжнародний воркшоп у Східниці став першою публічною подією SICRS та IRCCN."
-        : "The international workshop in Shidnytsia became the first public event of SICRS and IRCCN.",
-      content: isUk
-        ? `12–13 червня 2026 року у Східницькій громаді відбувся міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень», який став першою публічною подією міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN).
-
-У заході взяли участь представники органів місцевого самоврядування, міжнародних організацій, наукових установ, бізнесу та громадського сектору з України та інших країн.
-
-Ключовою подією воркшопу став офіційний запуск SICRS та IRCCN як міжнародних платформ для розвитку наукової співпраці, підготовки Policy Briefs та підтримки прийняття рішень на основі даних.
-
-За результатами воркшопу розпочато формування міжнародної експертної мережі, визначено пріоритетні напрями співпраці та започатковано підготовку першого Policy Brief для Східницької територіальної громади.
-
-Проведений захід став важливим кроком у розвитку міжнародної співпраці та створенні нових механізмів підтримки відновлення громад і територій України.`
-        : `On June 12–13, 2026, the international workshop “Community Resilience: From Data and Analytics to Practical Solutions” was held in the Skhidnytsia Territorial Community. The event became the first public activity of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN).
-
-The workshop brought together representatives of local self-government bodies, international organizations, research institutions, businesses, and civil society organizations from Ukraine and other countries.
-
-A key milestone of the workshop was the official launch of SICRS and IRCCN as international platforms for fostering scientific cooperation, developing Policy Briefs, and supporting evidence-based decision-making.
-
-As a result of the workshop, the process of establishing an international expert network was initiated, priority areas for cooperation were identified, and the preparation of the first Policy Brief for the Skhidnytsia Territorial Community was launched.
-
-The event marked an important step in strengthening international cooperation and creating new mechanisms to support the recovery and sustainable development of Ukrainian communities and territories.
-`
-    }
   ];
 
 

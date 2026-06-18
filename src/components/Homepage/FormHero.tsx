@@ -37,7 +37,7 @@ export function FormHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* <Link to={localizePath(language, "/googleform")}> */}
+            <Link to={localizePath(language, "/contact-form")}>
               <Button
                 size="xl"
                 variant="outline"
@@ -45,7 +45,7 @@ export function FormHero() {
               >
                 {t("formHero.form")}
               </Button>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
       </div>

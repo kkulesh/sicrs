@@ -83,7 +83,8 @@ export function ArticlesDetailPage() {
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full max-h-[400px] object-cover rounded-2xl shadow-lg border border-gray-100"
+                  className="max-w-full w-full object-contain rounded-2xl shadow-lg border border-gray-100"
+                  style={{ maxHeight: "80vh" }}
                 />
               </div>
             )}
