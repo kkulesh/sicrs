@@ -136,7 +136,7 @@ export function NewsSection() {
                           {news.dateFull}
                         </p>
                         <div className="flex flex-wrap gap-1">
-                          {news.tags?.slice(0, 2).map((tag, tagIndex) => (
+                          {news.tags?.slice(0, 3).map((tag, tagIndex) => (
                             <Badge
                               key={tagIndex}
                               variant="outline"
@@ -145,7 +145,7 @@ export function NewsSection() {
                               {tag}
                             </Badge>
                           ))}
-                          {news.tags && news.tags.length > 2 && (
+                          {news.tags && news.tags.length > 3 && (
                             <Badge
                               variant="outline"
                               className="border-white/40 text-white/90 hover:bg-white/10 text-xs"
