@@ -28,11 +28,11 @@ export function FormHero() {
         style={{ zIndex: 3 }}
       >
         <div className="flex flex-col items-center">
-          <h1 className="text-3xl lg:text-3xl font-medium mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-3xl lg:text-3xl font-medium mb-6 leading-tight drop-shadow-lg whitespace-pre-line">
             {t('formHero.title')}
           </h1>
 
-          <p className="text-xl mb-8 text-gray-100 leading-relaxed drop-shadow-md max-w-3xl">
+          <p className="text-xl mb-8 text-gray-100 leading-relaxed drop-shadow-md max-w-3xl whitespace-pre-line">
             {t('formHero.subtitle')}
           </p>
 

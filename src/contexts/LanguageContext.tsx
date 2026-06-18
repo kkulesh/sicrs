@@ -100,7 +100,8 @@ const ukrainianTranslations = {
       expertDetail: "",
     },
     bottomText2: {
-      home: "Ми працюємо над розвитком штучного інтелекту\n для науки та суспільства",
+
+      home: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
       partnership: "Разом ми будуємо майбутнє технологій",
       contacts: "Зв'яжіться з нами для співпраці, консультацій\n та партнерських ініціатив",
       researchTopics: "Знаходьте наші дописи за темами",
@@ -160,9 +161,9 @@ const ukrainianTranslations = {
     contactFormLink: "Форма зворотного зв'язку"
   },
   formHero: {
-    title: "Залиште контакти для співпраці",
-    subtitle: "Розроблення інноваційних рішень у сфері штучного інтелекту в стратегічних секторах економіки",
-    form:"Форма вступу в базу даних",
+    title: "Industrial Recovery & Community Capacity Network (IRCCN)",
+    subtitle: "Industrial Recovery & Community Capacity Network (IRCCN) - це міжнародна мережа науковців, експертів, громад та партнерських організацій, які об'єднують знання, досвід і практику для відновлення економіки, розвитку територій та посилення спроможності громад.\n\nМережа створена для обміну знаннями, розвитку партнерств, реалізації спільних проєктів, підготовки Policy Briefs та поширення кращих міжнародних практик.\n\nПриєднуйтеся до IRCCN та станьте частиною міжнародної спільноти, яка працює над формуванням майбутнього громад і територій на основі даних, досліджень та практичних рішень",
+    form:"Приєднатися до мережі",
     learnMore: "Дізнатися більше",
     ourEvents: "Наші події",
     description: {
@@ -174,22 +175,22 @@ const ukrainianTranslations = {
   },
   tasks: {
     title: "Про нас",
-    subtitle: "Ми працюємо над створенням комплексної аналітичної та дослідницької екосистеми для підтримки відновлення промисловості та розвитку територіальних громад України на основі даних, доказової аналітики та міжнародного партнерства.",
+    subtitle: "Ми формуємо міжнародну науково-аналітичну екосистему для підтримки відновлення промисловості, розвитку та посилення резильєнтності територіальних громад на основі даних, доказової аналітики та міжнародного партнерства",
     analyticalResearch: {
-      title: "Аналітичні дослідження",
-      description: "Проведення міждисциплінарних досліджень у сфері відновлення економіки, промислового розвитку та підвищення спроможності територіальних громад."
+      title: "Дослідження відновлення промисловості та розвитку громад",
+      description: "Проведення міждисциплінарних досліджень у сферах промислового відновлення, економічної трансформації, регіонального розвитку та підвищення спроможності територіальних громад на основі сучасних аналітичних підходів і міжнародного досвіду."
     },
     consulting: {
-      title: "Консультування стейкхолдерів",
-      description: "Надання експертної підтримки для органів державної влади, місцевого самоврядування, міжнародних організацій та бізнесу щодо прийняття рішень на основі даних."
+      title: "Доказова аналітика та Policy Briefs",
+      description: "Підготовка аналітичних звітів, Policy Briefs, рекомендацій та практичних рішень для органів державної влади, місцевого самоврядування, міжнародних організацій і партнерів з метою підтримки прийняття рішень на основі даних і доказів."
     },
     education: {
-      title: "Навчання та поширення досвіду",
-      description: "Організація воркшопів, наукових семінарів та міжнародних програм обміну для розвитку експертного середовища у сфері відновлення та регіональної політики."
+      title: "Міжнародна співпраця та експертні мережі",
+      description: "Розвиток міжнародного наукового співробітництва, об'єднання експертів, дослідників, громад та інституцій у межах мережі Industrial Recovery & Community Capacity Network (IRCCN) для обміну знаннями, досвідом та кращими практиками."
     },
     strategy: {
-      title: "Обговорення стратегій та інновацій",
-      description: "Розробка та впровадження інноваційних підходів до відновлення громад, промислової трансформації та формування стійких територіальних екосистем."
+      title: "Інновації для стійкого розвитку та резильєнтності",
+      description: "Розроблення та впровадження інноваційних підходів до відновлення територій, розвитку людського капіталу, посилення економічної стійкості та формування резильєнтних громад в умовах сучасних викликів."
     }
   },
   initiatives: {
@@ -218,9 +219,9 @@ const ukrainianTranslations = {
   },
   homeAbout: {
     title: "",
-    text: "SICRS — це міжнародне наукове товариство, яке об’єднує дослідників, експертів, представників громад та міжнародних партнерів для розробки практичних рішень у сфері відновлення промисловості, розвитку територіальних громад та підвищення їхньої стійкості. Ми працюємо на перетині науки, даних та практики, перетворюючи дослідження й аналітику на інструменти, що допомагають громадам, інституціям та партнерам приймати обґрунтовані рішення для відновлення та довгострокового розвитку. Через дослідження, міжнародну співпрацю, аналітичні продукти та платформу IRCCN ми створюємо середовище, де знання перетворюються на реальні зміни.",
-    quote: "\"Дані та докази самі по собі не змінюють реальність — зміни народжуються тоді, коли знання поєднуються з практикою.\"",
-    author: "— Ольга Іляш"
+    text: "SICRS - міжнародне наукове товариство, засноване ГО «Академічний простір» та Науково-дослідним центром індустріальних проблем розвитку НАН України для об'єднання дослідників, експертів, представників органів влади, територіальних громад, бізнесу та міжнародних партнерів навколо спільної мети - формування доказових рішень для відновлення промисловості, розвитку територій та зміцнення спроможності громад.\n\nМи працюємо на перетині науки, аналітики та практики, перетворюючи дослідження, дані та міжнародний досвід на інструменти підтримки прийняття рішень для післявоєнного відновлення та сталого розвитку.\n\nЧерез дослідницьку діяльність, міжнародне співробітництво, аналітичні продукти, Policy Briefs та мережу Industrial Recovery & Community Capacity Network (IRCCN) ми створюємо платформу, де знання стають основою реальних змін.",
+    quote: "\"Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього\"",
+    author: "— Команда SICRS"
   },
   homePartnerships: {
     title: "Партнери",
@@ -604,7 +605,7 @@ const englishTranslations = {
       experts: "Our Experts"
     },
     bottomText2: {
-      home: "We work on developing artificial intelligence\n for science and society",
+      home: "\"From data and analytics - to practical solutions for communities, economy, and the future\"",
       partnership: "Together, we are building the future of technology",
       contacts: "Contact us for collaboration, consultations\n and partnership initiatives",
       researchTopics: "Explore our posts by topics",
@@ -664,9 +665,9 @@ const englishTranslations = {
     contactFormLink: "Contact Form"
   },
   formHero: {
-    title: "Building Expert Environment in AI Field",
-    subtitle: "Developing innovative solutions in artificial intelligence for strategic economic sectors",
-    form:"Database entry form",
+    title: "Industrial Recovery & Community Capacity Network (IRCCN)",
+    subtitle: "Industrial Recovery & Community Capacity Network (IRCCN) is an international network of researchers, experts, communities, and partner organizations that bring together knowledge, experience, and practice for economic recovery, territorial development, and community capacity building.\n\nThe network is created to share knowledge, develop partnerships, implement joint projects, prepare Policy Briefs, and disseminate best international practices.\n\nJoin IRCCN and become part of an international community working to shape the future of communities and territories based on data, research, and practical solutions.",
+    form:"Join the network",
     learnMore: "Learn More",
     ourEvents: "Our Events",
     description: {
@@ -677,23 +678,23 @@ const englishTranslations = {
     university: "Igor Sikorsky Kyiv Polytechnic Institute"
   },
   tasks: {
-    title: "About us",
-    subtitle: "We are working to build a comprehensive analytical and research ecosystem that supports industrial recovery and the development of territorial communities in Ukraine through data-driven approaches, evidence-based analysis, and international partnership.",
+    title: "Key areas of SICRS activity",
+    subtitle: "We are building an international scientific and analytical ecosystem to support industrial recovery, development, and resilience of territorial communities based on data, evidence-based analytics, and international partnerships",
     analyticalResearch: {
-      title: "Analytical Research",
-      description: "Conducting interdisciplinary research in industrial recovery, economic development, and strengthening the capacity of territorial communities."
+      title: "Research on industrial recovery and community development",
+      description: "Conducting interdisciplinary research in the areas of industrial recovery, economic transformation, regional development, and enhancing the capacity of territorial communities based on modern analytical approaches and international experience"
     },
     consulting: {
-      title: "Stakeholder Consulting",
-      description: "Providing expert support to government institutions, local authorities, international organizations, and businesses in evidence-based decision-making."
+      title: "Evidence-based analytics and Policy Briefs",
+      description: "Preparation of analytical reports, Policy Briefs, recommendations, and practical solutions for public authorities, local governments, international organizations, and partners to support data- and evidence-based decision-making"
     },
     education: {
-      title: "Training and Knowledge Sharing",
-      description: "Organizing workshops, academic seminars, and international exchange programs to develop expertise in recovery, regional development, and public policy."
+      title: "International cooperation and expert networks",
+      description: "Development of international scientific cooperation, bringing together experts, researchers, communities, and institutions within the Industrial Recovery & Community Capacity Network (IRCCN) to exchange knowledge, experience, and best practices"
     },
     strategy: {
-      title: "Strategy and Innovation Discussion",
-      description: "Designing and implementing innovative approaches to community recovery, industrial transformation, and the formation of resilient territorial ecosystems."
+      title: "Innovations for sustainable development and resilience",
+      description: "Developing and implementing innovative approaches to territory recovery, human capital development, strengthening economic stability, and forming resilient communities in the face of modern challenges"
     }
   },
   initiatives: {
@@ -722,9 +723,9 @@ const englishTranslations = {
   },
   homeAbout: {
     title: "",
-    text: "SICRS is an international scientific society that brings together researchers, experts, community representatives, and international partners to develop practical solutions for industrial recovery, territorial community development, and strengthening resilience. We operate at the intersection of science, data, and practice, transforming research and analytics into tools that help communities, institutions, and partners make evidence-based decisions for recovery and long-term development. Through research, international collaboration, analytical products, and the IRCCN platform, we create an environment where knowledge is transformed into real change.",
-    quote: "\"Data and evidence alone do not change reality — change emerges when knowledge is combined with practice.\"",
-    author: "— Olga Ilyash"
+    text: "SICRS is an international scientific society founded by the NGO 'Academic Space' and the Research Center for Industrial Problems of Development of the NAS of Ukraine to bring together researchers, experts, government representatives, territorial communities, business, and international partners around a common goal - generating evidence-based solutions for industrial recovery, territory development, and community capacity strengthening.\n\nWe work at the intersection of science, analytics, and practice, turning research, data, and international experience into decision-support tools for post-war recovery and sustainable development.\n\nThrough research activities, international cooperation, analytical products, Policy Briefs, and the Industrial Recovery & Community Capacity Network (IRCCN), we create a platform where knowledge becomes the basis for real changes.",
+    quote: "\"From data and analytics - to practical solutions for communities, economy, and the future\"",
+    author: "— SICRS Team"
   },
   homePartnerships: {
     title: "Partners",

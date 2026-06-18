@@ -268,10 +268,9 @@ export function Header() {
                 <SheetTrigger asChild>
                   <Button
                     variant="ghost"
-                    size="2xl"
-                    className="text-white hover:bg-white/10 p-10 h-8 w-8 rounded-full"
+                    className="text-white hover:bg-white/10 p-2 h-16 w-16 rounded-full flex items-center justify-center"
                   >
-                    <Menu className="h-8 w-10" />
+                    <Menu className="text-white !w-10 !h-10" />
                   </Button>
                 </SheetTrigger>
 

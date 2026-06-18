@@ -173,10 +173,9 @@ export function StickyHeader({ currentPage = "home", onNavigate, onAnnouncementC
                 <SheetTrigger asChild>
                   <Button 
                     variant="ghost" 
-                    size="lg" 
-                    className="flex items-center justify-center text-white/90 hover:text-gray-900 hover:bg-gray-100 h-9 w-9 p-0 rounded-full"
+                    className="flex items-center justify-center text-white/90 hover:text-gray-900 hover:bg-gray-100 h-16 w-16 p-0 rounded-full"
                   >
-                    <Menu className="w-8 h-8" />
+                    <Menu className="!w-10 !h-10" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent

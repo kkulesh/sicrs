@@ -5,15 +5,15 @@ export const HeaderContent: Record<string, {
   height: string;
 }> = {
   home: {
-    background: "/images/HeaderBackgrounds/18.png", //"/images/ai_background.jpg"
+    background: "/images/HeaderBackgrounds/32.png", //"/images/ai_background.jpg"
     bottomText1: "Наукове товариство з досліджень відновлення промисловості та резильєнтності територіальних громад",
-    bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
+    bottomText2: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
     height: "450px",
   },
   contactForm: {
     background: "/images/HeaderBackgrounds/18.png", //"/images/ai_background.jpg"
     bottomText1: "Форма",
-    bottomText2: "Ми працюємо над розвитком штучного інтелекту для науки та суспільства",
+    bottomText2: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
     height: "450px",
   },
   articleDetail: {
