@@ -283,30 +283,32 @@ export function Header() {
 
               return (
                 <div className="absolute bottom-12 text-left space-y-8">
-                  {/* Logo Section (Moved down) */}
-                  <div className="font-sans mb-12">
-                    <Link to={localizePath(language, "/")} className="flex items-center space-x-6 cursor-pointer group">
-                    
-                    {/* Center Logo */}
-                    <div className="w-36 h-36 bg-white rounded-[2rem] flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
-                      <img
-                        src="/images/Logos/L-100x100.png"
-                        alt="Logo"
-                        className="w-36 h-36 object-contain"
-                      />
-                    </div>
+                  {/* Logo Section (Moved down) - Only for home */}
+                  {currentPage === 'home' && (
+                    <div className="font-sans mb-12">
+                      <Link to={localizePath(language, "/")} className="flex items-center space-x-6 cursor-pointer group">
+                      
+                      {/* Center Logo */}
+                      <div className="w-36 h-36 bg-white rounded-[2rem] flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
+                        <img
+                          src="/images/Logos/L-100x100.png"
+                          alt="Logo"
+                          className="w-36 h-36 object-contain"
+                        />
+                      </div>
 
-                    {/* Title */}
-                    <div className={`max-w-2xl overflow-hidden font-sans${isUk ? "leading-tight" : "leading-tight"}`}>
-                      <h1 className={`text-white text-5xl font-medium whitespace-pre-line ${isUk ? "leading-snug" : "leading-snug"}`}>
-                        {t("header.title")}
-                      </h1>
-                      <p className={`text-white/90 text-3xl whitespace-pre-line mt-3 ${isUk ? "leading-tight" : "leading-tight"}`}>
-                        {t("header.subtitle")}
-                      </p>
+                      {/* Title */}
+                      <div className={`max-w-2xl overflow-hidden font-sans${isUk ? "leading-tight" : "leading-tight"}`}>
+                        <h1 className={`text-white text-5xl font-medium whitespace-pre-line ${isUk ? "leading-snug" : "leading-snug"}`}>
+                          {t("header.title")}
+                        </h1>
+                        <p className={`text-white/90 text-3xl whitespace-pre-line mt-3 ${isUk ? "leading-tight" : "leading-tight"}`}>
+                          {t("header.subtitle")}
+                        </p>
+                      </div>
+                    </Link>
                     </div>
-                  </Link>
-                  </div>
+                  )}
 
                   {bottomText1 && (
                     <p className="text-white text-3xl font-bold max-w-4xl leading-snug whitespace-pre-line">

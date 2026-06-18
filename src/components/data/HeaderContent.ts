@@ -17,11 +17,11 @@ export const HeaderContent: Record<string, {
     height: "450px",
   },
   articleDetail: {
-    background: "/images/HeaderBackgrounds/18.png",
+    background: "/images/HeaderBackgrounds/32.png",
     height: "200px",
   },
   fallback: {
-    background: "/images/HeaderBackgrounds/background4.jpg",
+    background: "/images/HeaderBackgrounds/32.png",
     height: "200px",
   },
 };

@@ -116,7 +116,7 @@ function UnderConstruction() {
               SICRS
             </h1>
             <p className="text-white/80 text-lg whitespace-pre-line leading-tight">
-              Society for industrial recovery{"\n"}& community resilience studies
+              Society for Industrial Recovery{"\n"}& Community Resilience Studies
             </p>
           </div>
         </a>

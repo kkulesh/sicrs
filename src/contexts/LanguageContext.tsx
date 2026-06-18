@@ -61,7 +61,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 const ukrainianTranslations = {
   header: {
     title: "SICRS",
-    subtitle: "Society for industrial recovery\n& community resilience studies",
+    subtitle: "Society for Industrial Recovery\n& Community Resilience Studies",
     topNav: {
       news: "Новини",
       partnership: "Партнери",
@@ -150,7 +150,7 @@ const ukrainianTranslations = {
   },
   footer: {
     title: "SICRS",
-    subtitle: "Society for industrial recovery\n& community resilience studies",
+    subtitle: "Society for Industrial Recovery\n& Community Resilience Studies",
     quickLinks: "Швидкі посилання",
     contact: "Контакти",
     followUs: "Слідкуйте за нами",
@@ -567,7 +567,7 @@ const ukrainianTranslations = {
 const englishTranslations = {
   header: {
     title: "SICRS",
-    subtitle: "Society for industrial recovery\n& community resilience studies",
+    subtitle: "Society for Industrial Recovery\n& Community Resilience Studies",
     topNav: {
       news: "News",
       partnership: "Partners",
@@ -654,7 +654,7 @@ const englishTranslations = {
   },
   footer: {
     title: "SICRS",
-    subtitle: "Society for industrial recovery\n& community resilience studies",
+    subtitle: "Society for Industrial Recovery\n& Community Resilience Studies",
     quickLinks: "Quick Links",
     contact: "Contact",
     followUs: "Follow Us",
