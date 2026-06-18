@@ -27,7 +27,7 @@ const config: Config = {
           "primary-medium": "#152056", // між primary і primary-dark 
           "primary-medium2": "#1e2154", // #181754
           "primary-dark": "#01061a",
-          "primary1": "#152c56",
+          "primary1": "#03122b",
           "primary2": "#f27507",
           "primary3": "#f0a901",
         accent: 'var(--accent)',
