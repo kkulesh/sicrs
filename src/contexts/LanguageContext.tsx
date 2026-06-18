@@ -101,7 +101,7 @@ const ukrainianTranslations = {
     },
     bottomText2: {
 
-      home: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
+      home: "«Від аналітики до трансформації: рішення для громад, економіки та відновлення України»",
       partnership: "Разом ми будуємо майбутнє технологій",
       contacts: "Зв'яжіться з нами для співпраці, консультацій\n та партнерських ініціатив",
       researchTopics: "Знаходьте наші дописи за темами",
@@ -220,7 +220,7 @@ const ukrainianTranslations = {
   homeAbout: {
     title: "",
     text: "SICRS - міжнародне наукове товариство, засноване ГО «Академічний простір» та Науково-дослідним центром індустріальних проблем розвитку НАН України для об'єднання дослідників, експертів, представників органів влади, територіальних громад, бізнесу та міжнародних партнерів навколо спільної мети - формування доказових рішень для відновлення промисловості, розвитку територій та зміцнення спроможності громад.\n\nМи працюємо на перетині науки, аналітики та практики, перетворюючи дослідження, дані та міжнародний досвід на інструменти підтримки прийняття рішень для післявоєнного відновлення та сталого розвитку.\n\nЧерез дослідницьку діяльність, міжнародне співробітництво, аналітичні продукти, Policy Briefs та мережу Industrial Recovery & Community Capacity Network (IRCCN) ми створюємо платформу, де знання стають основою реальних змін.",
-    quote: "\"Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього\"",
+    quote: "\"Від аналітики до трансформації: рішення для громад, економіки та відновлення України\"",
     author: "— Команда SICRS"
   },
   homePartnerships: {
@@ -605,7 +605,7 @@ const englishTranslations = {
       experts: "Our Experts"
     },
     bottomText2: {
-      home: "\"From data and analytics - to practical solutions for communities, economy, and the future\"",
+      home: "\"From Analytics to Transformation: Solutions for Communities, the Economy, and Ukraine’s Recovery\"",
       partnership: "Together, we are building the future of technology",
       contacts: "Contact us for collaboration, consultations\n and partnership initiatives",
       researchTopics: "Explore our posts by topics",
@@ -724,7 +724,7 @@ const englishTranslations = {
   homeAbout: {
     title: "",
     text: "SICRS is an international scientific society founded by the NGO 'Academic Space' and the Research Center for Industrial Problems of Development of the NAS of Ukraine to bring together researchers, experts, government representatives, territorial communities, business, and international partners around a common goal - generating evidence-based solutions for industrial recovery, territory development, and community capacity strengthening.\n\nWe work at the intersection of science, analytics, and practice, turning research, data, and international experience into decision-support tools for post-war recovery and sustainable development.\n\nThrough research activities, international cooperation, analytical products, Policy Briefs, and the Industrial Recovery & Community Capacity Network (IRCCN), we create a platform where knowledge becomes the basis for real changes.",
-    quote: "\"From data and analytics - to practical solutions for communities, economy, and the future\"",
+    quote: "\"From Analytics to Transformation: Solutions for Communities, the Economy, and Ukraine’s Recovery\"",
     author: "— SICRS Team"
   },
   homePartnerships: {

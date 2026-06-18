@@ -96,42 +96,11 @@ export function Header() {
         <div className="absolute inset-0 bg-black/20"></div>
       </div> 
 
-      {/* Header Content */}
+          {/* Header Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full pt-12">
         <div className="flex items-start justify-between h-full">
 
-          {/* Logo Section */}
-          <div className="flex-shrink-0 font-sans">
-            <Link to={localizePath(language, "/")} className="flex items-center space-x-4 cursor-pointer group">
-            
-            {/* Center Logo */}
-            <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
-              <img
-                src="/images/Logos/L-100x100.png"
-                alt="Logo"
-                className="w-16 h-16 object-contain"
-              />
-            </div>
-
-            {/* Title - Hidden on mobile */}
-            <div
-              className={`hidden sm:block max-w-xs overflow-hidden font-sans${
-                isUk ? "leading-tight" : "leading-tight"
-              }`}
-            >
-              <h1 className={`text-white text-2xl font-medium whitespace-pre-line ${
-                isUk ? "leading-snug" : "leading-snug"
-              }`}>
-                {t("header.title")}
-              </h1>
-              <p className={`text-white/80 text-lg whitespace-pre-line ${
-                isUk ? "leading-tight" : "leading-tight"
-              }`}>
-                {t("header.subtitle")}
-              </p>
-            </div>
-          </Link>
-          </div>
+          <div className="flex-shrink-0" />
 
           {/* Navigation Section */}
           <div className="hidden xl:flex flex-col items-end justify-center space-y-6 flex-1 ml-8">
@@ -313,7 +282,32 @@ export function Header() {
               // if (!bottomText1 && !bottomText2) return null;
 
               return (
-                <div className="absolute bottom-12 text-left space-y-4">
+                <div className="absolute bottom-12 text-left space-y-8">
+                  {/* Logo Section (Moved down) */}
+                  <div className="font-sans mb-12">
+                    <Link to={localizePath(language, "/")} className="flex items-center space-x-6 cursor-pointer group">
+                    
+                    {/* Center Logo */}
+                    <div className="w-36 h-36 bg-white rounded-[2rem] flex items-center justify-center text-gray-900 group-hover:bg-gray-100 transition-colors shadow-lg">
+                      <img
+                        src="/images/Logos/L-100x100.png"
+                        alt="Logo"
+                        className="w-36 h-36 object-contain"
+                      />
+                    </div>
+
+                    {/* Title */}
+                    <div className={`max-w-2xl overflow-hidden font-sans${isUk ? "leading-tight" : "leading-tight"}`}>
+                      <h1 className={`text-white text-5xl font-medium whitespace-pre-line ${isUk ? "leading-snug" : "leading-snug"}`}>
+                        {t("header.title")}
+                      </h1>
+                      <p className={`text-white/90 text-3xl whitespace-pre-line mt-3 ${isUk ? "leading-tight" : "leading-tight"}`}>
+                        {t("header.subtitle")}
+                      </p>
+                    </div>
+                  </Link>
+                  </div>
+
                   {bottomText1 && (
                     <p className="text-white text-3xl font-bold max-w-4xl leading-snug whitespace-pre-line">
                       {bottomText1}

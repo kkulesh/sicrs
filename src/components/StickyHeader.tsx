@@ -87,17 +87,17 @@ export function StickyHeader({ currentPage = "home", onNavigate, onAnnouncementC
               onClick={() => handleNavigation("home")}
             >
               {/* Center Logo */}
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-white group-hover:bg-gray-100 transition-colors shadow-lg">
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center text-white group-hover:bg-gray-100 transition-colors shadow-lg">
               <img
                 src="/images/Logos/L-100x100.png"
                 alt="Logo"
-                className="w-8 h-8 object-contain"
+                className="w-12 h-12 object-contain"
               />
             </div>
 
               {/* Title - Hidden on mobile */}
               <div className="hidden lg:block">
-                <h1 className="text-white text-lg font-medium leading-tight font-sans">
+                <h1 className="text-white text-2xl font-medium leading-tight font-sans">
                   {t('stickyHeader.title')}
                 </h1>
               </div>

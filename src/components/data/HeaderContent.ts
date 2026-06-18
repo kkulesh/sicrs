@@ -7,13 +7,13 @@ export const HeaderContent: Record<string, {
   home: {
     background: "/images/HeaderBackgrounds/32.png", //"/images/ai_background.jpg"
     bottomText1: "Наукове товариство з досліджень відновлення промисловості та резильєнтності територіальних громад",
-    bottomText2: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
+    bottomText2: "«Від аналітики до трансформації: рішення для громад, економіки та відновлення України»",
     height: "450px",
   },
   contactForm: {
     background: "/images/HeaderBackgrounds/18.png", //"/images/ai_background.jpg"
     bottomText1: "Форма",
-    bottomText2: "«Від даних і аналітики - до практичних рішень для громад, економіки та майбутнього»",
+    bottomText2: "«Від аналітики до трансформації: рішення для громад, економіки та відновлення України»",
     height: "450px",
   },
   articleDetail: {

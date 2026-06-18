@@ -42,20 +42,20 @@ export function Footer() {
               >
               
               {/* Logo */}
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center group-hover:bg-gray-100 transition-colors shadow-lg">
+              <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center group-hover:bg-gray-100 transition-colors shadow-lg">
                 <img
                   src="/images/Logos/L-100x100.png"
                   alt="Logo"
-                  className="w-10 h-10 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
               </div>
 
               {/* Text: Title + Subtitle */}
               <div className="text-left font-sans">
-                <h1 className={`text-white text-sm font-medium whitespace-pre-line ${isUk ? "leading-normal" : "leading-normal"}`}>
+                <h1 className={`text-white text-xl font-medium whitespace-pre-line ${isUk ? "leading-tight" : "leading-tight"}`}>
                   {t('footer.title')}
                 </h1>
-                <p className={`text-gray-300 text-xs whitespace-pre-line ${isUk ? "leading-normal" : "leading-normal"} max-w-md`}>
+                <p className={`text-gray-300 text-sm whitespace-pre-line ${isUk ? "leading-snug" : "leading-snug"} max-w-md`}>
                   {t('footer.subtitle')}
                 </p>
               </div>
