@@ -135,22 +135,22 @@ export const Articles = (isUk: boolean) => [
       content: isUk
         ? `12–13 червня 2026 року у Східницькій громаді відбувся міжнародний воркшоп «Стійкість громад: від даних та аналітики до практичних рішень», який став першою публічною подією міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN).
 
-У заході взяли участь представники органів місцевого самоврядування, міжнародних організацій, наукових установ, бізнесу та громадського сектору з України та інших країн.
+У заході взяли участь представники органів місцевого самоврядування, державної влади, міжнародних організацій, наукових установ, бізнесу та громадського сектору з України та інших країн.
 
 Ключовою подією воркшопу став офіційний запуск SICRS та IRCCN як міжнародних платформ для розвитку наукової співпраці, підготовки Policy Briefs та підтримки прийняття рішень на основі даних.
 
 За результатами воркшопу розпочато формування міжнародної експертної мережі, визначено пріоритетні напрями співпраці та започатковано підготовку першого Policy Brief для Східницької територіальної громади.
 
 Проведений захід став важливим кроком у розвитку міжнародної співпраці та створенні нових механізмів підтримки відновлення громад і територій України.`
-        : `On June 12–13, 2026, the international workshop “Community Resilience: From Data and Analytics to Practical Solutions” was held in the Shidnytsya Territorial Community. The event became the first public activity of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN).
+        : `On June 12–13, 2026, the Skhidnytsia community hosted an international workshop titled “Community Resilience: From Data and Analytics to Practical Solutions,” which marked the first public event organized by the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN).
 
-The workshop brought together representatives of local self-government bodies, international organizations, research institutions, businesses, and civil society organizations from Ukraine and other countries.
+The event was attended by representatives of local governments, state authorities, international organizations, research institutions, the business community, and the civil society sector from Ukraine and other countries.
 
-A key milestone of the workshop was the official launch of SICRS and IRCCN as international platforms for fostering scientific cooperation, developing Policy Briefs, and supporting evidence-based decision-making.
+The highlight of the workshop was the official launch of SICRS and IRCCN as international platforms for fostering scientific collaboration, preparing policy briefs, and supporting data-driven decision-making.
 
-As a result of the workshop, the process of establishing an international expert network was initiated, priority areas for cooperation were identified, and the preparation of the first Policy Brief for the Shidnytsya Territorial Community was launched.
+Following the workshop, work began on forming an international network of experts, priority areas for cooperation were identified, and preparations were initiated for the first Policy Brief for the Skhidnytsia territorial community.
 
-The event marked an important step in strengthening international cooperation and creating new mechanisms to support the recovery and sustainable development of Ukrainian communities and territories.
+The event marked an important step in the development of international cooperation and the creation of new mechanisms to support the recovery of communities and territories in Ukraine.
 `
     },
     {
