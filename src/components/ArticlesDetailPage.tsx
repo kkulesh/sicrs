@@ -78,6 +78,16 @@ export function ArticlesDetailPage() {
       <section className="py-4 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
+            {article.image && (
+              <div className="mb-8 w-full flex justify-center">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full max-h-[400px] object-cover rounded-2xl shadow-lg border border-gray-100"
+                />
+              </div>
+            )}
+
             {/* <Badge className="mb-4 bg-blue-600 text-white">
               {article.category}
             </Badge> */}

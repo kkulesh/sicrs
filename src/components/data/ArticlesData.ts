@@ -127,7 +127,7 @@ export const Articles = (isUk: boolean) => [
       dateTime: "01.06.2026",
       readTime: "3",
       tags: isUk ? ["Новини", "SICRS"] : ["News", "SICRS"],
-      image: "/images/Logos/L.png",
+      image: "/images/Articles/imt_lucca_prof.jpg",
       size: "large",
       description: isUk
         ? "Оголошено про створення Society for Industrial Recovery & Community Resilience Studies (SICRS) - міжнародного наукового товариства."
@@ -162,7 +162,7 @@ One of SICRS’s key areas of work will be the development of an international n
       dateTime: "05.06.2026",
       readTime: "4",
       tags: isUk ? ["Гранти", "IRCCN"] : ["Grants", "IRCCN"],
-      image: "/images/Articles/imt_lucca_prof.jpg",
+      image: "/images/Articles/zoom_grant.png",
       size: "small",
       description: isUk
         ? "Проєкт увійшов до числа переможців Science at Risk та отримав грантову підтримку."
@@ -196,7 +196,7 @@ The support received has enabled the practical implementation of the initiative 
       dateTime: "10.06.2026",
       readTime: "4",
       tags: isUk ? ["Події", "Воркшоп"] : ["Events", "Workshop"],
-      image: "/images/Articles/imt_lucca_prof.jpg",
+      image: "/images/Articles/workshop.jpg",
       size: "small",
       description: isUk
         ? "12-13 червня 2026 року у Східниці відбудеться міжнародний воркшоп."
@@ -229,7 +229,7 @@ As part of the event, the official launch of the international scientific societ
       dateTime: "15.06.2026",
       readTime: "4",
       tags: isUk ? ["Події", "IRCCN"] : ["Events", "IRCCN"],
-      image: "/images/Articles/imt_lucca_prof.jpg",
+      image: "/images/Articles/report.jpg",
       size: "small",
       description: isUk
         ? "Міжнародний воркшоп у Східниці став першою публічною подією SICRS та IRCCN."

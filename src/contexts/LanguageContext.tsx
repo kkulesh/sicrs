@@ -678,7 +678,7 @@ const englishTranslations = {
     university: "Igor Sikorsky Kyiv Polytechnic Institute"
   },
   tasks: {
-    title: "Key areas of SICRS activity",
+    title: "About Us",
     subtitle: "We are building an international scientific and analytical ecosystem to support industrial recovery, development, and resilience of territorial communities based on data, evidence-based analytics, and international partnerships",
     analyticalResearch: {
       title: "Research on industrial recovery and community development",
