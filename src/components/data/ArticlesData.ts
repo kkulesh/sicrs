@@ -241,7 +241,7 @@ As part of the event, the official launch of the international scientific societ
       dateTime: "05.06.2026",
       readTime: "4",
       tags: isUk ? ["Гранти", "IRCCN"] : ["Grants", "IRCCN"],
-      image: "/images/Articles/zoom_grant.png",
+      image: "/images/Articles/zoom_grant.jpg",
       size: "small",
       description: isUk
         ? "Проєкт увійшов до числа переможців Science at Risk та отримав грантову підтримку."

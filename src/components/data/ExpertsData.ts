@@ -36,9 +36,9 @@ export const expertsData = (isUk: boolean) => [
   {
     id: "trushkina",
     name: isUk ? "Наталія ТРУШКІНА" : "Nataliia TRUSHKINA",
-    position: isUk ? "Кандидат економічних наук, старший дослідник. Учасниця SICRS. Експертка з питань промислової політики, регіонального розвитку, логістики та відновлення економічних систем" 
+    position: isUk ? "Кандидат економічних наук, старший дослідник. Учасниця SICRS. Експертка з питань розвитку критичної інфраструктури, логістики та відновлення економічних систем" 
                       : 
-                    "Candidate of Economic Sciences (PhD in Economics), Senior Researcher. Member of SICRS. Expert in industrial policy, regional development, logistics, and the recovery of economic systems",
+                    "Candidate of Economic Sciences (PhD in Economics), Senior Researcher. Member of SICRS. Expert in critical infrastructure development, logistics, and the recovery of economic systems",
     image: "/images/ExpertPhotos/trushkina.jpg"
   },
 ];
