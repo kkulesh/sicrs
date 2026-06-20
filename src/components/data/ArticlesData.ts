@@ -220,7 +220,12 @@ The event marked an important step in the development of international cooperati
 
 Воркшоп об'єднає представників органів місцевого самоврядування, державної влади, міжнародних організацій, науковців, бізнесу та громадянського суспільства для обговорення сучасних підходів до розвитку громад, відновлення економіки, енергетичної стійкості та міжнародної співпраці.
 
-У межах заходу відбудеться офіційний запуск міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN), а також презентація перших напрацювань щодо підтримки громад України.`
+У межах заходу відбудеться офіційний запуск міжнародного наукового товариства SICRS та мережі Industrial Recovery & Community Capacity Network (IRCCN), а також презентація перших напрацювань щодо підтримки громад України.
+
+---
+
+### [📥 Завантажити Policy Brief (PDF)](/documents/++Workshop_Programme_V1_УКР.pdf)
+`
         : `On June 12–13, 2026, the Shidnytsya Territorial Community of Lviv Region, Ukraine, will host the international workshop “Community Resilience: From Data and Analytics to Practical Solutions”.
 
 The event is organized within the framework of the Industrial Recovery & Community Capacity Network (IRCCN) project and the activities of the international scientific society SICRS.
@@ -228,6 +233,10 @@ The event is organized within the framework of the Industrial Recovery & Communi
 The workshop will bring together representatives of local self-government bodies, public authorities, international organizations, academia, business, and civil society to discuss modern approaches to community development, economic recovery, energy resilience, and international cooperation.
 
 As part of the event, the official launch of the international scientific society SICRS and the Industrial Recovery & Community Capacity Network (IRCCN) will take place. The first outcomes and initiatives aimed at supporting Ukrainian communities will also be presented.
+
+---
+
+### [📥 Download Policy Brief (PDF)](/documents/++Workshop_Programme_V1_УКР.pdf)
 `
     },
     {
